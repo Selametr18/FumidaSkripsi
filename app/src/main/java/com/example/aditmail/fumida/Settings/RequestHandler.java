@@ -172,7 +172,6 @@ public class RequestHandler {
             URL url = new URL(requestURL + id_pegawai + "&kategoriCariWorkReport=" + kategoriCariWorkReport + "&cariDataWorkReport=" + cariDataWorkReport);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(con.getInputStream()));
-
             String s;
             while((s=bufferedReader.readLine())!=null){
                 sb.append(s+"\n");

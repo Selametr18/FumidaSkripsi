@@ -9,7 +9,7 @@ public class Konfigurasi {
     public static final String url_image = "https://antirayap.co.id/apps.mobile.fumida/";
     //public static final String url_access = "http://192.168.100.78/fumida/api.user/";
 
-    public static final String url_access = "https://antirayap.co.id/apps.mobile.fumida/api.user/";
+    public static final String url_access = "https://antirayap.co.id/fumidaskripsi.selamet/api.user/";
 
 
     public static final String URL_CEK_ABSENSI_HARIAN = url_access + "checkAbsensiHarian.php";
