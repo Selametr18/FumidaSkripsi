@@ -13,25 +13,15 @@
         android:layout_height="match_parent"
         android:layout_margin="20dp">
 
-        <ImageView
-            android:layout_centerHorizontal="true"
-            android:id="@+id/imageView_SalesTeknisi"
-            android:layout_width="match_parent"
-            android:layout_height="90dp"
-            android:layout_marginBottom="20dp"
-            android:contentDescription="@string/gambar_Sales"
-            android:layout_alignParentTop="true"
-            app:srcCompat="@drawable/ic_sales_teknisi" />
 
         <TextView
             android:id="@+id/textView_NamaPegawai"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="60dp"
             android:fontFamily="@font/roboto"
             android:textAlignment="center"
             android:text="(NAMA)"
-            android:layout_below="@+id/imageView_SalesTeknisi"
             android:textColor="@android:color/background_dark"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -88,7 +78,7 @@
             android:gravity="center"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:text="Copyright \u00A9 2019 PT Fumida Pestindo Jaya.\nAll Rights Reserved"
+            android:text="Copyright \u00A9 2021 Selamet Riyadi.\nAll Rights Reserved"
             android:textSize="12sp"
             android:textStyle="bold" />
 
