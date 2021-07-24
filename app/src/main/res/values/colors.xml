@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#8294F6</color>
+    <color name="colorPrimaryDark">#303f9f</color>
+    <color name="colorAccent">#b42f32</color>
+    <color name="Fumida_Color">#B42F32</color>
+    <color name="CanvasBackground">#FFFFFF</color>
+    <color name="Fumida_ColorAtas">#000000</color>
+
+    <color name="Berhasil">#32CD32</color>
+    <color name="Menunggu">#FF7700</color>
+    <color name="Gagal">#FF0000</color>
+</resources>

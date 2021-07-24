@@ -1,0 +1,1729 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:ignore="contentDescription"
+    android:fillViewport="true">
+
+    <!--<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">-->
+
+        <LinearLayout
+            android:id="@+id/LinearLayout_Test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/CanvasBackground"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/imageView_Identitas"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/Fumida_Color"
+                android:gravity="center"
+                android:text="Identitas Pelanggan"
+                android:textAlignment="center"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!--<ImageView
+                android:id="@+id/imageView_Identitas"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/Fumida_Color"
+                android:contentDescription="@string/Strip_Identity"
+                android:src="@drawable/rb_identity" />-->
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:stretchColumns="1">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView_IDClient"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/text_ClientID"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/editText_ClientID_Pest"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/roboto"
+                        android:hint="@string/Hint_ClientID"
+                        android:inputType="textPersonName"
+                        android:text="FPJ-"
+                        android:textSize="16sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView_NamaPelanggan"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/text_namaPelanggan"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView_Kategori"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/text_kategori"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <EditText
+                        android:id="@+id/editText_NamaPelanggan"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:hint="@string/hint_namaPelanggan"
+                        android:inputType="textPersonName"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/spinner_Kategori"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/kategori_pilihan"
+                        android:prompt="@string/kategori_prompt"
+                        android:spinnerMode="dialog" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView_Alamat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/text_alamat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/editText_Alamat"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginStart="5dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/roboto"
+                                android:hint="@string/hint_alamat"
+                                android:inputType="textMultiLine"
+                                android:textSize="14sp" />
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="0dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.2"
+                                app:cardBackgroundColor="@color/CanvasBackground"
+                                app:cardCornerRadius="5dp"
+                                app:cardElevation="3dp"
+                                app:contentPadding="3dp">
+
+                                <ImageView
+                                    android:id="@+id/imgPin"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    app:srcCompat="@drawable/ic_pin_location" />
+                            </android.support.v7.widget.CardView>
+
+                        </TableRow>
+
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/textView_NoHP"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/text_hp"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView_Email"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/text_email"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <EditText
+                        android:id="@+id/editText_NoHP"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:hint="@string/hint_telepon"
+                        android:inputType="number"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/editText_Email"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:hint="@string/hint_email"
+                        android:inputType="textEmailAddress"
+                        android:textSize="16sp" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/imageView_JenisHama"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/Fumida_Color"
+                android:gravity="center"
+                android:text="Jenis Hama yang Dikendalikan"
+                android:textAlignment="center"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!--<ImageView
+                android:id="@+id/imageView_JenisHama"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/Fumida_Color"
+                android:contentDescription="@string/Strip_Identity"
+                android:src="@drawable/rb_jenishama" />-->
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:stretchColumns="1">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/checkBox_Kecoa"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|start"
+                        android:text="@string/check_Kecoa"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="15sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox_Kutu"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|start"
+                        android:text="@string/check_Kutu"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="15sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox_Lalat"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|start"
+                        android:text="@string/Check_Lalat"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="15sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox_Cicak"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|start"
+                        android:text="@string/Check_Cicak"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="15sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <CheckBox
+                        android:id="@+id/checkBox_Semut"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|start"
+                        android:text="@string/check_Semut"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="15sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox_Tikus"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|start"
+                        android:text="@string/check_Tikus"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="15sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox_Tawon"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|start"
+                        android:text="@string/check_Tawon"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="15sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox_Nyamuk"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|start"
+                        android:text="@string/check_Nyamuk"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="15sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp">
+
+                    <CheckBox
+                        android:id="@+id/checkBox_HamaLainnya"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|start"
+                        android:text="@string/check_Lainnya"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/editText_HamaLainnya"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|start"
+                        android:hint="@string/hint_masukkan_jenis_hama_lainnya"
+                        android:inputType="text"
+                        android:textSize="17sp"
+                        android:visibility="gone" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/imageView_Kategori2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/Fumida_Color"
+                android:gravity="center"
+                android:text="Kategori Penanganan Pest Control"
+                android:textAlignment="center"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!--<ImageView
+                android:id="@+id/imageView_Kategori2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/Fumida_Color"
+                android:contentDescription="@string/Strip_Identity"
+                android:src="@drawable/rb_kategoripenangananpest" />-->
+
+            <Spinner
+                android:id="@+id/spinner_KategoriPenanganan"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:entries="@array/kategoriPenanganan_pilihan"
+                android:prompt="@string/kategoriPenanganan_prompt"
+                android:spinnerMode="dialog" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp">
+
+                <EditText
+                    android:id="@+id/editText_QtyPenanganan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto"
+                    android:hint="@string/hint_QtyPenanganan"
+                    android:inputType="number"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/textView_Penanganan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_Kunjungan"
+                    android:textAlignment="textStart"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+            </TableRow>
+
+            <TextView
+                android:id="@+id/imageView_CemicalDipakai"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/Fumida_Color"
+                android:gravity="center"
+                android:text="Chemical yang Digunakan"
+                android:textAlignment="center"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!--<ImageView
+                android:id="@+id/imageView_CemicalDipakai"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/Fumida_Color"
+                android:contentDescription="@string/Strip_Identity"
+                android:src="@drawable/rb_chemical" />-->
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:stretchColumns="1">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:id="@+id/checkBox_BoricAcid"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|start"
+                        android:text="@string/checkbox_BoricAcid"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="15sp"
+                        android:textStyle="italic" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox_Cypermethrin"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|start"
+                        android:text="@string/checkbox_Cypermethrin"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="15sp"
+                        android:textStyle="italic" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:id="@+id/checkBox_ZetaCypermethrin"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|start"
+                        android:text="@string/checkbox_ZetaCypermethrin"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="15sp"
+                        android:textStyle="italic" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox_Dichlorvos"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|start"
+                        android:text="@string/checkbox_dichlorvos"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="15sp"
+                        android:textStyle="italic" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:id="@+id/checkBox_Fipronil"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|start"
+                        android:text="@string/checkbox_fipronil"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="15sp"
+                        android:textStyle="italic" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox_Thiamethoxam"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|start"
+                        android:text="@string/checkbox_thiamethoxam"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="15sp"
+                        android:textStyle="italic" />
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/imageView_Metode"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/Fumida_Color"
+                android:gravity="center"
+                android:text="Metode Pengendalian Hama"
+                android:textAlignment="center"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!--<ImageView
+                android:id="@+id/imageView_Metode"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/Fumida_Color"
+                android:contentDescription="@string/Strip_Identity"
+                android:src="@drawable/rb_metodekendalihama" />-->
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:stretchColumns="1">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|start"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/checkBox_Penyemprotan"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|start"
+                        android:text="@string/chk_Penyemprotan"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox_Pengembunan"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|start"
+                        android:text="@string/chk_ColdFogging"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center|start">
+
+                    <CheckBox
+                        android:id="@+id/checkBox_PengasapanThermal"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|start"
+                        android:text="@string/chk_ThermalFogging"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox_PengasapanMini"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|start"
+                        android:text="@string/chk_MiniFogging"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center|start">
+
+                    <CheckBox
+                        android:id="@+id/checkBox_PerangkapTikus"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|start"
+                        android:text="@string/chk_PerangkapTikus"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox_LemTikus"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|start"
+                        android:text="@string/chk_LemTikus"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center|start"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editText_QtyPerangkapTikus"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:hint="@string/hint_KuantitasBuah"
+                        android:inputType="number|numberDecimal"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/editText_QtyLemTikus"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:hint="@string/hint_KuantitasBuah"
+                        android:inputType="number|numberDecimal"
+                        android:lineSpacingExtra="8sp"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center|start">
+
+                    <CheckBox
+                        android:id="@+id/checkBox_UmpanTikusIndoor"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|start"
+                        android:text="@string/chk_UmpanTikusIndoor"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox_UmpanTikusOutdoor"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|start"
+                        android:text="@string/chk_UmpanTikusOutdoor"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center|start"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editText_QtyUmpanIndoor"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:hint="@string/hint_QtyTitik"
+                        android:inputType="number|numberDecimal"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/editText_QtyUmpanOutdoor"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:hint="@string/hint_QtyTitik"
+                        android:inputType="number|numberDecimal"
+                        android:lineSpacingExtra="8sp"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center|start">
+
+                    <CheckBox
+                        android:id="@+id/checkBox_UmpanGelKecoa"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|start"
+                        android:text="@string/chk_GelKecoa"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox_UmpanSemut"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|start"
+                        android:text="@string/chk_UmpanSemut"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center|start">
+
+                    <CheckBox
+                        android:id="@+id/checkBox_PerangkapLemKecoa"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|start"
+                        android:text="@string/chk_LemKecoa"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox_UmpanLalat"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|start"
+                        android:text="@string/chk_UmpanLalat"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center|start">
+
+                    <CheckBox
+                        android:id="@+id/checkBox_PohonLalat"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|start"
+                        android:text="@string/chk_PohonLalat"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox_InstalasiBlackHole"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|start"
+                        android:text="@string/chk_BlackHole"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center|start"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editText_QtyPohonLalat"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:hint="@string/hint_QtyTitik"
+                        android:inputType="number|numberDecimal"
+                        android:lineSpacingExtra="8sp"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/editText_QtyBlackHole"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:hint="@string/hint_QtyTitik"
+                        android:inputType="number|numberDecimal"
+                        android:lineSpacingExtra="8sp"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center|start">
+
+                    <CheckBox
+                        android:id="@+id/checkBox_Fumigasi"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|start"
+                        android:text="@string/chk_Fumigas"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox_InstalasiFlyCatcher"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|start"
+                        android:text="@string/chk_FlyCatcher"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center|start"
+                    android:orientation="vertical">
+
+                    <Spinner
+                        android:id="@+id/spinner_Fumigasi"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="1"
+                        android:entries="@array/metodeLain_entries"
+                        android:gravity="center"
+                        android:prompt="@string/metodeLain_prompt"
+                        android:spinnerMode="dialog"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/editText_QtyFlyCatcher"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:hint="@string/hint_QtyTitik"
+                        android:inputType="number|numberDecimal"
+                        android:lineSpacingExtra="8sp"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center|start"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/checkBox_MetodeLainnya"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="15dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|start"
+                        android:text="@string/check_Lainnya"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/editText_MetodeLainnya"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/roboto"
+                        android:hint="@string/hint_MetodeLain"
+                        android:inputType="text"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/imageView_AreaLokasi"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/Fumida_Color"
+                android:gravity="center"
+                android:text="Area Lokasi"
+                android:textAlignment="center"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!--<ImageView
+                android:id="@+id/imageView_AreaLokasi"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/Fumida_Color"
+                android:contentDescription="@string/Strip_Identity"
+                android:src="@drawable/rb_arealokasi" />-->
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:stretchColumns="1">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView_LuasBangunan"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/text_LuasBangunan"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView_LuasOutdoor"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/text_LuasOutdoor"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/editText_LuasBangunan"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:hint="@string/hint_LuasBangunan"
+                        android:inputType="number|numberDecimal"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/editText_LuasOutdoor"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:hint="@string/hint_LuasOutdoor"
+                        android:inputType="number|numberDecimal"
+                        android:textSize="16sp" />
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/imageView_KontrakPenawaran"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/Fumida_Color"
+                android:gravity="center"
+                android:text="Kontrak dan Penawaran Harga"
+                android:textAlignment="center"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+           <!-- <ImageView
+                android:id="@+id/imageView_KontrakPenawaran"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/Fumida_Color"
+                android:contentDescription="@string/Strip_Identity"
+                android:src="@drawable/rb_kontrakharga" />-->
+
+            <RadioGroup
+                android:id="@+id/RadioGroup_Kontrak"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal"
+                android:stretchColumns="1">
+
+                <RadioButton
+                    android:id="@+id/radioButton_Kontrak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/radio_Kontrak"
+                    android:textSize="15sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButton_NonKontrak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/radio_NonKontrak"
+                    android:textSize="15sp" />
+
+            </RadioGroup>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:stretchColumns="1">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView_DurasiKontrak"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/text_DurasiKontrak"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/textView_PenawaranHarga"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/txt_penawaranHarga"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/editText_DurasiKontrak"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:hint="@string/hint_DurasiKontrak"
+                        android:inputType="number"
+                        android:textSize="17sp"
+                        android:visibility="gone" />
+
+                    <!--<com.aldoapps.autoformatedittext.AutoFormatEditText-->
+                    <EditText
+                        android:id="@+id/editText_PenawaranHarga"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:hint="@string/hint_PenawaranHarga"
+                        android:inputType="number|numberDecimal"
+                        android:textSize="17sp"
+                        android:visibility="gone" />
+
+                    <!--app:isDecimal="true"-->
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView_GrandTotal"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center|start"
+                        android:text="@string/txt_GrandTotal"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/editText_GrandTotal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/roboto"
+                        android:inputType="number|numberDecimal"
+                        android:textSize="17sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/textView_StatusKerjasama"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/text_StatusKerjasama"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+
+                <RadioGroup
+                    android:id="@+id/RadioGroup_Status"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioButton_Berhasil"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/radio_Berhasil"
+                        android:textSize="15sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton_Gagal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/radio_Gagal"
+                        android:textSize="15sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton_Menunggu"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/radio_Menunggu"
+                        android:textSize="15sp" />
+
+                </RadioGroup>
+
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/imageView_Foto"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/Fumida_Color"
+                android:gravity="center"
+                android:text="Upload Foto Pekerjaan"
+                android:textAlignment="center"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!--<ImageView
+                android:id="@+id/imageView_Foto"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/Fumida_Color"
+                android:contentDescription="@string/Strip_Identity"
+                android:src="@drawable/rb_uploadfoto" />-->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp">
+
+                <ImageView
+                    android:id="@+id/imageView_FotoSatu"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="0.7"
+                    android:visibility="gone" />
+
+                <Space
+                    android:id="@+id/Space_Satu"
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/imageView_FotoDua"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="0.7"
+                    android:visibility="gone" />
+
+                <Space
+                    android:id="@+id/Space_Dua"
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp">
+
+                <Button
+                    android:id="@+id/button_FotoSatu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:text="Pilih Foto #1"
+                    android:textAlignment="center" />
+
+                <Button
+                    android:id="@+id/button_FotoDua"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:text="Pilih Foto #2"
+                    android:textAlignment="center"
+                    android:visibility="gone" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp">
+
+                <ImageView
+                    android:id="@+id/imageView_FotoTiga"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="0.7"
+                    android:visibility="gone" />
+
+                <Space
+                    android:id="@+id/Space_Tiga"
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/imageView_FotoEmpat"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="0.7"
+                    android:visibility="gone" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp">
+
+                <Button
+                    android:id="@+id/button_FotoTiga"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:text="Pilih Foto #3"
+                    android:textAlignment="center"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/button_FotoEmpat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:text="Pilih Foto #4"
+                    android:textAlignment="center"
+                    android:visibility="gone" />
+            </TableRow>
+
+            <TextView
+                android:id="@+id/imageView_CatatanTambahan"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/Fumida_Color"
+                android:gravity="center"
+                android:text="Catatan Tambahan"
+                android:textAlignment="center"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!--<ImageView
+                android:id="@+id/imageView_CatatanTambahan"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/Fumida_Color"
+                android:contentDescription="@string/Strip_Identity"
+                android:src="@drawable/rb_catatan" />-->
+
+            <EditText
+                android:id="@+id/editText_CatatanTambahan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:ems="10"
+                android:fontFamily="@font/roboto"
+                android:hint="@string/hint_catatanTambahan"
+                android:inputType="textMultiLine"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/imageView_TandaTangan"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/Fumida_Color"
+                android:gravity="center"
+                android:text="Tanda Tangan Digital"
+                android:textAlignment="center"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+           <!-- <ImageView
+                android:id="@+id/imageView_TandaTangan"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/Fumida_Color"
+                android:contentDescription="@string/Strip_Identity"
+                android:src="@drawable/rb_ttd" />-->
+
+            <CheckBox
+                android:id="@+id/checkBox_PernyataanCustomer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/text_pernyataanCustomer"
+                android:textAlignment="textStart"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/checkBox_PernyataanPestConsultant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/text_pernyataanPestControl"
+                android:textSize="14sp" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:stretchColumns="1">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/text_TTD_Pelanggan"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/text_TTD_Consultant"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:id="@+id/imageView_TTD_Pelanggan"
+                        android:layout_width="0dp"
+                        android:layout_height="160dp"
+                        android:layout_weight="1" />
+                    <!--android:src="@android:color/transparent"-->
+
+                    <ImageView
+                        android:id="@+id/imageView_TTD_Consultant"
+                        android:layout_width="0dp"
+                        android:layout_height="160dp"
+                        android:layout_weight="1" />
+                    <!--android:src="@android:color/transparent" -->
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:scaleType="fitXY">
+
+                    <!--
+                    <Button
+                        android:id="@+id/button_HapusTTD_Pelanggan"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"
+                        android:scaleType="fitXY"
+                        android:text="@string/hapus_txt"
+                        android:textAllCaps="false"
+                        android:textSize="13sp" /> -->
+
+                    <Button
+                        android:id="@+id/button_GetTTD_Pelanggan"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="0.6"
+                        android:enabled="false"
+                        android:fontFamily="@font/roboto"
+                        android:scaleType="fitXY"
+                        android:text="@string/text_TombolTTD"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textSize="13sp" />
+
+                    <!--
+                    <Button
+                        android:id="@+id/button_HapusTTD_Consultant"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"
+                        android:scaleType="fitXY"
+                        android:text="@string/hapus_txt"
+                        android:textAllCaps="false"
+                        android:textSize="13sp" />-->
+
+                    <Button
+                        android:id="@+id/button_GetTTD_Consultant"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="0.6"
+                        android:enabled="false"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/text_TombolTTD"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textSize="13sp" />
+                </TableRow>
+
+            </TableLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="50dp"
+                app:cardCornerRadius="10dp">
+
+                <Button
+                    android:id="@+id/button_SimpanSurvey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/Fumida_Color"
+                    android:fontFamily="@font/roboto"
+                    android:padding="10dp"
+                    android:text="Pratinjau"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    <!--</ScrollView>-->
+
+</ScrollView>

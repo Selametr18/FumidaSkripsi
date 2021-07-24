@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Fumida_Color"
+    android:orientation="vertical"
+    tools:context=".Activities.SignatureActivity">
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/clear_ttd"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1.5"
+            android:background="@color/Fumida_Color"
+            android:text="Hapus"
+            android:textAlignment="center"
+            android:textColor="@color/CanvasBackground"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/getSign_ttd"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1.5"
+            android:background="@color/Fumida_Color"
+            android:text="Simpan"
+            android:textAlignment="center"
+            android:textColor="@color/CanvasBackground"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:ignore="ButtonStyle" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:color/darker_gray" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:id="@+id/canvasTTD_LayoutConsultant"
+                android:layout_width="350dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center"
+                android:background="@color/CanvasBackground"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+</LinearLayout>

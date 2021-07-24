@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:layout_margin="20dp"
+    tools:context=".Activities.TampilanRegistrasi">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top|center_vertical"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView_Regis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/roboto"
+            android:text="Registrasi Data Diri"
+            android:textColor="@android:color/background_dark"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgPicture"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center"
+                android:padding="8dp"
+                android:background="@drawable/ic_person" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                app:srcCompat="@drawable/ic_add_circle" />
+        </RelativeLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="left|start">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editText_NamaLengkap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/regis_NamaLengkap"
+                android:inputType="textPersonName"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:font="@font/roboto" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="left|start">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editText_NIK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/regist_NIK"
+                android:inputType="textPersonName"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:font="@font/roboto" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="left|start">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editText_Email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/regist_Email"
+                android:inputType="textEmailAddress"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:font="@font/roboto" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="left|start">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editText_HP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/regist_HP"
+                android:inputType="number"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:font="@font/roboto" />
+        </android.support.design.widget.TextInputLayout>
+
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@color/colorAccent"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="left|start">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editText_Username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/regist_Username"
+                android:inputType="textPersonName"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:font="@font/roboto" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/colorPrimaryDark">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editText_Password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/txt_password"
+                android:inputType="textPassword"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:font="@font/roboto" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/colorPrimaryDark">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editText_CekPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/txt_CekPassword"
+                android:inputType="textPassword"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:font="@font/roboto" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+
+            app:cardCornerRadius="10dp">
+
+            <Button
+                android:id="@+id/button_Registrasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/Fumida_Color"
+                android:fontFamily="@font/roboto"
+                android:text="@string/btn_registrasi"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView_IDSurvei_Data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="TextView"
+        android:textColor="@color/Fumida_ColorAtas"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:stretchColumns="1">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView_IDClient"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ID Client"
+                android:textColor="@color/Fumida_ColorAtas"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:text=":"
+                android:textColor="@color/Fumida_ColorAtas"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/textView_IDClient_Data"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="TextView"
+                android:textColor="@color/Fumida_ColorAtas"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp">
+
+            <TextView
+                android:id="@+id/textView_NamaPelanggan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Client"
+                android:textColor="@color/Fumida_ColorAtas"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:text=":"
+                android:textColor="@color/Fumida_ColorAtas"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/textView_NamaPelanggan_Data"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="TextView"
+                android:textColor="@color/Fumida_ColorAtas"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp">
+
+            <TextView
+                android:id="@+id/textView_Hp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No HP"
+                android:textColor="@color/Fumida_ColorAtas"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:text=":"
+                android:textColor="@color/Fumida_ColorAtas"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/textView_Hp_Data"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="TextView"
+                android:textColor="@color/Fumida_ColorAtas"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp">
+
+            <TextView
+                android:id="@+id/textView_JenisRayap"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Jenis Rayap"
+                android:textColor="@color/Fumida_ColorAtas"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:text=":"
+                android:textColor="@color/Fumida_ColorAtas"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/textView_JenisRayap_Data"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="TextView"
+                android:textColor="@color/Fumida_ColorAtas"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp">
+
+            <TextView
+                android:id="@+id/textView_KategoriPenanganan_Termite_List"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Kategori Penanganan"
+                android:textColor="@color/Fumida_ColorAtas"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:text=":"
+                android:textColor="@color/Fumida_ColorAtas"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/textView_KategoriPenanganan_Termite_List_Data"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="TextView"
+                android:textColor="@color/Fumida_ColorAtas"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp">
+
+            <TextView
+                android:id="@+id/textView_Status"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Status"
+                android:textColor="@color/Fumida_ColorAtas"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:text=":"
+                android:textColor="@color/Fumida_ColorAtas"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/textView_Status_Data"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="TextView"
+                android:textColor="@color/Fumida_ColorAtas"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp">
+
+            <TextView
+                android:id="@+id/textView_Tanggal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tanggal"
+                android:textColor="@color/Fumida_ColorAtas"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:text=":"
+                android:textColor="@color/Fumida_ColorAtas"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/textView_Tanggal_Data"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="TextView"
+                android:textColor="@color/Fumida_ColorAtas"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>

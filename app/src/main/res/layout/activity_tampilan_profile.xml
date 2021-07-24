@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="20dp"
+    tools:context=".Activities.TampilanProfile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="top|center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView_Update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/roboto"
+            android:text="Data Diri Pengguna"
+            android:textAllCaps="false"
+            android:textColor="@android:color/background_dark"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgPicture_Update"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center"
+                android:padding="8dp"
+                app:background="@drawable/ic_person" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                app:srcCompat="@drawable/ic_add_circle" />
+        </RelativeLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="left|start">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editText_NamaLengkap_Update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="false"
+                android:hint="@string/regis_NamaLengkap"
+                android:inputType="textPersonName"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:font="@font/roboto" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="left|start">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editText_NIK_Update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="false"
+                android:inputType="text"
+                android:hint="@string/regist_NIK"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:font="@font/roboto" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="left|start">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editText_Email_Update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="false"
+                android:hint="@string/regist_Email"
+                android:inputType="textEmailAddress"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:font="@font/roboto" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="left|start">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editText_HP_Update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="false"
+                android:hint="@string/regist_HP"
+                android:inputType="number"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:font="@font/roboto" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="left|start">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editText_Username_Update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="false"
+                android:hint="@string/regist_Username"
+                android:inputType="textPersonName"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:font="@font/roboto" />
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView_EditDataDiri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:drawableLeft="@drawable/ic_edit_blue_35dp"
+            android:drawableStart="@drawable/ic_edit_blue_35dp"
+            android:drawablePadding="10dp"
+            android:gravity="center|start|left"
+            android:text="Ubah Data Diri"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cd_Profil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            app:cardCornerRadius="10dp"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/button_UpdateProfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/Fumida_Color"
+                android:fontFamily="@font/roboto"
+                android:text="Perbarui Profil"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@android:color/background_light"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cd_Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="10dp"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/button_UpdatePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/Fumida_Color"
+                android:fontFamily="@font/roboto"
+                android:text="Perbarui Kata Kunci"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@android:color/background_light"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</ScrollView>

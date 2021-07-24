@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/app_bar_tampilan_menu_utama"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Activities.TampilanMenuUtama">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp">
+
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/imageView_SalesTeknisi"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="@string/gambar_Sales"
+            android:layout_alignParentTop="true"
+            app:srcCompat="@drawable/ic_sales_teknisi" />
+
+        <TextView
+            android:id="@+id/textView_NamaPegawai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto"
+            android:textAlignment="center"
+            android:text="(NAMA)"
+            android:layout_below="@+id/imageView_SalesTeknisi"
+            android:textColor="@android:color/background_dark"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView_IdPegawai"
+            android:layout_width="1dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/linear_Foto"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+<!--            <ImageView-->
+<!--                android:id="@+id/imageView_FormSurvei"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="150dp"-->
+<!--                android:contentDescription="@string/gambar_formSurvei"-->
+<!--                android:layout_marginRight="15dp"-->
+<!--                android:layout_marginEnd="15dp"-->
+<!--                android:padding="5dp"-->
+<!--                app:srcCompat="@drawable/ic_form_survey"-->
+<!--                android:layout_weight="1"/>-->
+
+            <ImageView
+                android:id="@+id/imageView_WorkReport"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:padding="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:contentDescription="@string/gambar_Workreport"
+                app:srcCompat="@drawable/ic_work_report"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="Copyright \u00A9 2019 PT Fumida Pestindo Jaya.\nAll Rights Reserved"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</FrameLayout>

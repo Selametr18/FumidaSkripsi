@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_account"
+            android:title="Profil" />
+    </group>
+
+<!--    <item android:title="My Survey">-->
+<!--        <menu>-->
+<!--            <item-->
+<!--                android:id="@+id/nav_pest"-->
+<!--                android:icon="@drawable/ic_small_pest"-->
+<!--                android:title="Pest Control" />-->
+
+<!--            <item-->
+<!--                android:id="@+id/nav_termite"-->
+<!--                android:icon="@drawable/ic_small_termite"-->
+<!--                android:title="Termite Control" />-->
+
+<!--            <item-->
+<!--                android:id="@+id/nav_fumigasi"-->
+<!--                android:icon="@drawable/ic_small_fumigasi"-->
+<!--                android:title="Fumigasi" />-->
+<!--        </menu>-->
+<!--    </item>-->
+
+    <item android:title="My Report">
+        <menu>
+            <item
+                android:id="@+id/nav_work_report"
+                android:icon="@drawable/ic_assignment"
+                android:title="Work Report" />
+        </menu>
+    </item>
+
+<!--    <item android:title="Absensi">-->
+<!--        <menu>-->
+<!--            <item-->
+<!--                android:id="@+id/nav_absensi"-->
+<!--                android:icon="@drawable/ic_absen"-->
+<!--                android:title="Absensi Harian (8.00 WIB)"/>-->
+<!--        </menu>-->
+<!--    </item>-->
+
+    <item android:title="Log Out">
+        <menu>
+            <item
+                android:id="@+id/nav_keluar"
+                android:icon="@drawable/ic_exit"
+                android:title="Keluar" />
+        </menu>
+    </item>
+
+</menu>

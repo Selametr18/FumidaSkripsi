@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=5C:6F:C1:2C:1F:C3:E1:91:3C:E3:3A:2B:D2:63:4D:95:3F:5D:6F:72%3Bcom.udakita.klikbar
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    5C:6F:C1:2C:1F:C3:E1:91:3C:E3:3A:2B:D2:63:4D:95:3F:5D:6F:72
+
+    SHA-1 certificate fingerprint:
+    5C:6F:C1:2C:1F:C3:E1:91:3C:E3:3A:2B:D2:63:4D:95:3F:5D:6F:72
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <!--<string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCCyn48HOvNzB0XXNAPRBwlRgMjM6YxJ4Q</string>-->
+
+    <!-- Punya Kapsul Bus -->
+    <!--<string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDH5l9y6adP0uqozVBvhLSetn08oj7k4Io</string>-->
+
+    <!-- Milik Fumida  Ichsan-->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDScNAXx4fCZVhy0Nf-fMjQ5fWl3S1HKQI</string>
+
+    <!-- Google Maps API Key diatas based on KlikBar milik Orang lain... Harap Diganti Nantinya -->
+
+    <!-- Google API Key: AIzaSyBe9P-itehQgH5BG7ox5vizpv5E1iGLMhg | Ini Milik Erecycle.. Sebagai Backup
+    Mohon diganti nantinya jika sudah ada yang baru -->
+
+    <!-- Google API Key : AIzaSyB-GpN72MFQMvYPELpDUXFSHSomRYGKilo >> Milik email aditmail321@gmail.com, "Project Maps-Fumida-300397"
+    Tidak Berfungsi normal karna belum registrasi kartu Kredit dan sebagainya -->
+
+    <!-- Google API Key : AIzaSyCaKPg_QmztHctBoOo6_Zf2-9DMoOnkxgQ >> Milik email aditya.ismail30@gmail.com, "Project Fumida Project"
+    Tidak Berfungsi normal karna belum registrasi kartu Kredit dan sebagainya -->
+
+    <!-- Google API Key : AIzaSyDNnL9wAIzhGQk8C7FuBHXAra7YFrZbSk0 >> Milik email aditya.ismail30@gmail.com, "Maps-Project-Fumida"
+    Tidak Berfungsi normal karna belum registrasi kartu Kredit dan sebagainya -->
+
+    <!-- Google API Key : AIzaSyCaKPg_QmztHctBoOo6_Zf2-9DMoOnkxgQ>> Milik email aditya.ismail30@gmail.com, "MapsTesting12345"
+    Tidak Berfungsi normal karna belum registrasi kartu Kredit dan sebagainya -->
+
+
+
+
+
+
+
+</resources>

@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.aditmail.fumida">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION_LOCATION" />
+    <!-- Services Permission -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name=".app.AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo_fumida_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo_fumida_icon"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Activities.OpenMaps"></activity>
+        <activity android:name=".Activities.AbsensiAtEight"
+            android:label="Absensi Harian 8.00 WIB"
+            android:parentActivityName=".Activities.TampilanMenuUtama"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+        <!-- Jalanin Auto Start when Booted -->
+        <receiver
+            android:name=".Settings.AutoStart"
+            android:enabled="true"
+            android:exported="true"
+            android:label="RestartServiceWhenStopped">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".Settings.AutoStart_Eight"
+            android:enabled="true"
+            android:exported="true"
+            android:label="RestartServiceWhenStopped">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".Settings.MyServices"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name=".Settings.MyServices_Eight"
+            android:enabled="true"
+            android:exported="true" /> <!-- Testing JobSchedlur -->
+
+        <activity
+            android:name=".WorkReport.PreviewWorkReport"
+            android:label="Data Work Report"
+            android:parentActivityName=".WorkReport.UpdateWorkReport"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Fumigasi.PreviewSurveiFumigasi"
+            android:label="Data Survey Fumigasi"
+            android:parentActivityName=".Fumigasi.UpdateSurveiFumigasi"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".TermiteControl.PreviewSurveiTermiteControl"
+            android:label="Data Survey Termite Control"
+            android:parentActivityName=".TermiteControl.UpdateSurveiTermiteControl"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".PestControl.PreviewSurveiPestControl"
+            android:label="Data Survey Pest Control"
+            android:parentActivityName=".PestControl.UpdateSurveiPestControl"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.ActivityLupaPassword"
+            android:label="Form Lupa Password"
+            android:parentActivityName=".Activities.ActivityLupaPassword"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Fumigasi.UpdateSurveiFumigasi"
+            android:hardwareAccelerated="false"
+            android:label="Perbarui Data Fumigasi"
+            android:largeHeap="true"
+            android:launchMode="singleTask"
+            android:parentActivityName=".Fumigasi.TabFumigasi"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Fumigasi.ReviewSurveiFumigasi"
+            android:configChanges="orientation|screenSize"
+            android:label="Summary Survey Fumigasi"
+            android:parentActivityName=".Fumigasi.TabFumigasi"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Fumigasi.TabFumigasi"
+            android:hardwareAccelerated="false"
+            android:label="Form dan Data Fumigasi"
+            android:largeHeap="true"
+            android:launchMode="singleTask"
+            android:parentActivityName=".Activities.TampilanSubMenuFormSurvey"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.aditmail.fumida.Activities.TampilanSubMenuFormSurvey" />
+        </activity>
+        <activity android:name=".Settings.MapsActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".WorkReport.UpdateWorkReport"
+            android:hardwareAccelerated="false"
+            android:label="Perbarui Data Work Report"
+            android:largeHeap="true"
+            android:launchMode="singleTask"
+            android:parentActivityName=".WorkReport.TabWorkReport"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".WorkReport.TabWorkReport"
+            android:hardwareAccelerated="false"
+            android:label="@string/title_activity_tab_work_report"
+            android:largeHeap="true"
+            android:launchMode="singleTask"
+            android:parentActivityName=".Activities.TampilanMenuUtama"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.aditmail.fumida.Activities.TampilanSubMenuFormSurvey" />
+        </activity>
+        <activity
+            android:name=".TermiteControl.TabSurveiTermiteControl"
+            android:hardwareAccelerated="false"
+            android:label="@string/title_activity_tab_survei_termite_control"
+            android:largeHeap="true"
+            android:launchMode="singleTask"
+            android:parentActivityName=".Activities.TampilanSubMenuFormSurvey"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.aditmail.fumida.Activities.TampilanSubMenuFormSurvey" />
+        </activity>
+        <activity
+            android:name=".PestControl.TabSurveiPestControl"
+            android:hardwareAccelerated="false"
+            android:label="@string/title_activity_tab_survei_pest_control"
+            android:largeHeap="true"
+            android:launchMode="singleTask"
+            android:parentActivityName=".Activities.TampilanSubMenuFormSurvey"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.aditmail.fumida.Activities.TampilanSubMenuFormSurvey" />
+        </activity>
+        <activity
+            android:name=".TermiteControl.UpdateSurveiTermiteControl"
+            android:hardwareAccelerated="false"
+            android:label="Perbarui Data Termite Control"
+            android:largeHeap="true"
+            android:launchMode="singleTask"
+            android:parentActivityName=".TermiteControl.TabSurveiTermiteControl"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".PestControl.UpdateSurveiPestControl"
+            android:hardwareAccelerated="false"
+            android:label="Perbarui Data Pest Control"
+            android:largeHeap="true"
+            android:launchMode="singleTask"
+            android:parentActivityName=".PestControl.TabSurveiPestControl"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Activities.TampilanLogin"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.Tampilan_Awal"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name=".Activities.TampilanRegistrasi"
+            android:configChanges="orientation"
+            android:label="Form Registrasi Data Diri"
+            android:parentActivityName=".Activities.TampilanLogin"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Activities.TampilanMenuUtama"
+            android:configChanges="orientation"
+            android:label="Menu Utama Fumida"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.TampilanSubMenuFormSurvey"
+            android:configChanges="orientation"
+            android:label="Pilihan Form Survey"
+            android:launchMode="singleTask"
+            android:parentActivityName=".Activities.TampilanMenuUtama"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.SignatureActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="false"
+            android:label="Tanda Tangan Disini"
+            android:largeHeap="true"
+            android:parentActivityName=".WorkReport.TabWorkReport"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PestControl.ReviewSurveiPestControl"
+            android:configChanges="orientation|screenSize"
+            android:label="Summary Pest Control"
+            android:parentActivityName=".PestControl.TabSurveiPestControl"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".TermiteControl.ReviewSurveiTermiteControl"
+            android:configChanges="orientation|screenSize"
+            android:label="Summary Termite Control"
+            android:parentActivityName=".TermiteControl.TabSurveiTermiteControl"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WorkReport.ReviewWorkReport"
+            android:configChanges="orientation|screenSize"
+            android:label="Summary Work Report"
+            android:parentActivityName=".WorkReport.TabWorkReport"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.TampilanProfile"
+            android:configChanges="orientation|screenSize"
+            android:label="Form Perbarui Data Diri"
+            android:parentActivityName=".Activities.TampilanMenuUtama"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Activities.TampilanUpdatePassword"
+            android:configChanges="orientation|screenSize"
+            android:label="Form Perbarui Password"
+            android:parentActivityName=".Activities.TampilanProfile"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+    </application>
+
+</manifest>

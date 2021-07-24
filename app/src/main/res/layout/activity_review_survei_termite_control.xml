@@ -1,0 +1,935 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/CanvasBackground"
+    tools:context=".TermiteControl.ReviewSurveiTermiteControl">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_SaveToDB"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@color/Fumida_Color"
+            android:gravity="center"
+            android:text="Simpan kedalam Database"
+            android:textAllCaps="false"
+            android:textColor="@color/CanvasBackground" />
+
+        <Button
+            android:id="@+id/btn_Generate_Termite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/Fumida_Color"
+            android:gravity="center"
+            android:text="Simpan Kedalam PDF"
+            android:textAllCaps="false"
+            android:textColor="@color/CanvasBackground" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/LinearLayout_PDF"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/CanvasBackground"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/ic_kop" />
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    app:srcCompat="?android:attr/colorPrimaryDark" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:text="Survey Termite Control"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="center|start">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="2dp">
+
+                        <TextView
+                            android:id="@+id/textView_IDClient"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center|start"
+                            android:text="@string/text_ClientID"
+                            android:textAllCaps="false"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal|bold" />
+
+                        <TextView
+                            android:id="@+id/Titik2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1"
+                            android:gravity="center|start"
+                            android:text=":"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/textView_ReviewID_Termite"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center|start"
+                            android:text="(Nomor Client)"
+                            android:textAllCaps="false"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="3dp">
+
+                        <TextView
+                            android:id="@+id/textView_NamaClient"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center|start"
+                            android:text="Nama Client"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal|bold" />
+
+                        <TextView
+                            android:id="@+id/Titik3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1"
+                            android:gravity="center|start"
+                            android:text=":"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/textView_ReviewNamaClient_Termite"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center|start"
+                            android:text="(Nama Client)"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="3dp">
+
+                        <TextView
+                            android:id="@+id/textView_Kategori"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center|start"
+                            android:text="Kategori"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/Titik4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1"
+                            android:gravity="center|start"
+                            android:text=":"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/textView_Kategori_Termite"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:gravity="center|start"
+                            android:text="(Kategori Tempat Klien)"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="3dp">
+
+                        <TextView
+                            android:id="@+id/textView_Alamat"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center|start"
+                            android:text="Alamat"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/Titik5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1"
+                            android:gravity="center|start"
+                            android:text=":"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/textView_Alamat_Termite"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:gravity="center|start"
+                            android:lineSpacingExtra="3sp"
+                            android:text="(Alamat Client)"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="3dp">
+
+                        <TextView
+                            android:id="@+id/textView_Hp"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center|start"
+                            android:text="No.HP/Telp"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/Titik6"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1"
+                            android:gravity="center|start"
+                            android:text=":"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/textView_Hp_Termite"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:gravity="center|start"
+                            android:text="(Nomor HP/Telepon)"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView_Email"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center|start"
+                            android:text="Email"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/Titik"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1"
+                            android:gravity="center|start"
+                            android:text=":"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/textView_Email_Termite"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:gravity="center|start"
+                            android:text="(Alamat Email)"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@color/Fumida_ColorAtas"
+                            android:textSize="10sp" />
+                    </TableRow>
+                </TableLayout>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="3dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="3dp">
+
+                        <TextView
+                            android:id="@+id/textView_Rayap"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="30dp"
+                            android:layout_weight="1"
+                            android:gravity="center|start"
+                            android:text="Jenis Kendali Rayap"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal|bold" />
+
+                        <TextView
+                            android:id="@+id/titik11"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1"
+                            android:gravity="center|start"
+                            android:text=":"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/textView_Rayap_Termite"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="20dp"
+                            android:layout_weight="2"
+                            android:gravity="center|start"
+                            android:text="(Rayap)"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView_Rayap2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="30dp"
+                            android:layout_weight="1"
+                            android:gravity="center|start"
+                            android:text="Kategori Penanganan Rayap"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal|bold" />
+
+                        <TextView
+                            android:id="@+id/titik12"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1"
+                            android:gravity="center|start"
+                            android:text=":"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/textView_KategoriPenanganan_Termite"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="20dp"
+                            android:layout_weight="2"
+                            android:gravity="center|start"
+                            android:text="(Rayap)"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+                    </TableRow>
+
+                </TableLayout>
+
+                <TextView
+                    android:id="@+id/textView_RayapKendali"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:text="Metode Kendali Rayap"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="10sp"
+                    android:textStyle="normal|bold" />
+
+                <TextView
+                    android:id="@+id/textView_RayapKendali_Termite"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"
+                    android:lineSpacingExtra="2sp"
+                    android:text="(Hama)"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="10sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/textView_LantaiBangunan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"
+                    android:text="Lantai Bangunan (Untuk Pasca Konstruksi)"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="10sp"
+                    android:textStyle="normal|bold" />
+
+                <TextView
+                    android:id="@+id/textView_LantaiBangunan_Termite"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"
+                    android:lineSpacingExtra="3sp"
+                    android:text="(Marmer/Granit/Dll)"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="10sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/textView_Chemical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:text="Chemical"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="10sp"
+                    android:textStyle="normal|bold" />
+
+                <TextView
+                    android:id="@+id/textView_Chemical_Termite"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"
+                    android:lineSpacingExtra="3sp"
+                    android:text="(Chemical)"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="10sp"
+                    android:textStyle="normal|italic" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="20dp">
+
+                    <TextView
+                        android:id="@+id/textView_LuasIndoor"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="3dp"
+                        android:layout_weight="1"
+                        android:gravity="center|start"
+                        android:text="Luas Bangunan"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="10sp"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:id="@+id/titik"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        android:gravity="center|start"
+                        android:text=":"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="10sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/textView_Indoor_Termite"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="2.5"
+                        android:gravity="left|center"
+                        android:lineSpacingExtra="8sp"
+                        android:text="(Luas Indoor)"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="10sp"
+                        android:textStyle="normal" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:id="@+id/textView_LuasOutdoor"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="3dp"
+                        android:layout_weight="1"
+                        android:gravity="center|start"
+                        android:text="Luas Outdoor"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="10sp"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:id="@+id/titik2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        android:gravity="center|start"
+                        android:text=":"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="10sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/textView_Outdoor_Termite"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="2.5"
+                        android:gravity="left|center"
+                        android:lineSpacingExtra="8sp"
+                        android:text="(Luas Outdoor)"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="10sp"
+                        android:textStyle="normal" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/TableRow_Kontrak_Text_Termite"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:id="@+id/textView_Penawaran"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="3dp"
+                        android:layout_weight="1"
+                        android:gravity="center|start"
+                        android:text="Penawaran Harga"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="10sp"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:id="@+id/titik5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        android:gravity="center|start"
+                        android:text=":"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="10sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/textView_Penawaran_Termite"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="3dp"
+                        android:layout_weight="2.5"
+                        android:gravity="left|center"
+                        android:text="(Harga)"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="10sp"
+                        android:textStyle="normal" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="20dp">
+
+                    <TextView
+                        android:id="@+id/textView_Status"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="3dp"
+                        android:layout_weight="1"
+                        android:gravity="center|start"
+                        android:text="Status Kerjasama"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="10sp"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:id="@+id/titik6"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        android:gravity="center|start"
+                        android:text=":"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="10sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/textView_Status_Termite"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="3dp"
+                        android:layout_weight="1.5"
+                        android:gravity="left|center"
+                        android:text="(Berhasil/Menunggu/Gagal)"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="10sp"
+                        android:textStyle="normal|bold" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="3dp">
+
+                    <TextView
+                        android:id="@+id/textView_TotalHarga"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="3dp"
+                        android:layout_weight="1"
+                        android:gravity="center|start"
+                        android:text="Total Harga Penawaran"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="10sp"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:id="@+id/titik7"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        android:gravity="center|start"
+                        android:text=":"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="10sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/textView_TotalHarga_Termite"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="3dp"
+                        android:layout_weight="2.5"
+                        android:gravity="left|center"
+                        android:text="(Total Harga)"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="10sp"
+                        android:textStyle="normal|bold|italic" />
+                </TableRow>
+
+                <TextView
+                    android:id="@+id/textView_Catatan2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="Catatan Tambahan"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="10sp"
+                    android:textStyle="normal|bold" />
+
+                <TextView
+                    android:id="@+id/textView_Catatan_Termite"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:lineSpacingExtra="3sp"
+                    android:text="(Catatan)"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="10sp"
+                    android:textStyle="normal" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:stretchColumns="1">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView_Hormat"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:lineSpacingExtra="3sp"
+                            android:text="Hormat Kami, \n PT Fumida Pestindo Jaya"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/textView_Mengetahui"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:lineSpacingExtra="8sp"
+                            android:text="Mengetahui,"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp">
+
+                        <ImageView
+                            android:id="@+id/imageView_TTD_Consultant_Termite"
+                            android:layout_width="0dp"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="1"
+                            tools:srcCompat="@tools:sample/avatars" />
+
+                        <ImageView
+                            android:id="@+id/imageView_TTD_Pelanggan_Termite"
+                            android:layout_width="0dp"
+                            android:layout_height="100dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            tools:srcCompat="@tools:sample/avatars" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/textView_NamaConsultant_Termite"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:lineSpacingExtra="3sp"
+                            android:text="(Nama Consultant)"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal|bold" />
+
+                        <TextView
+                            android:id="@+id/textView_NamaPelanggan_Termite"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:lineSpacingExtra="3sp"
+                            android:text="(Nama Pelanggan)"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal|bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView_Keterangan_Termite"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center|start"
+                            android:lineSpacingExtra="2sp"
+                            android:text="(Keterangan)"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="9sp"
+                            android:textStyle="normal" />
+                    </TableRow>
+                </TableLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="?android:attr/colorPrimaryDark" />
+
+            <include
+                layout="@layout/activity_review_survei_termite_control_lampiran"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

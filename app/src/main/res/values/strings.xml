@@ -1,0 +1,297 @@
+<resources>
+
+    <!-- Menu Utama/ Login -->
+    <string name="app_name">Fumida App</string>
+    <string name="awal">Image awal Fumida saat masuk</string>
+    <string name="username">Nama Pengguna</string>
+    <string name="input_Username">Masukkan Nama Pengguna Anda</string>
+    <string name="input_Password">Masukkan Nama Kata Kunci Anda</string>
+    <string name="password">Kata Kunci</string>
+    <string name="Login">Masuk</string>
+    <string name="User_Icon">Gambar User</string>
+    <string name="Button_Regis">Registrasi Akun Baru</string>
+    <string name="image_regist">Registrasi Data Diri</string>
+
+    <!-- Menu Registrasi-->
+    <string name="regis_NamaLengkap">Nama Lengkap</string>
+    <string name="Hint_NamaLengkap">Masukkan Nama Lengkap</string>
+    <string name="regist_NIK">Nomor Induk Kepegawaian (NIK)</string>
+    <string name="hint_NIK">Masukkan NIK Anda</string>
+    <string name="hint_Email">Masukkan Alamat E-Mail Anda</string>
+    <string name="regist_Username">Nama Pengguna (Username)</string>
+    <string name="hint_Username">Masukkan Username Anda</string>
+    <string name="regist_Email">Alamat E-Mail</string>
+    <string name="regist_HP">No. HP</string>
+    <string name="hint_HP">Masukkan No. HP Anda</string>
+    <string name="txt_password">Kata Kunci (Password)</string>
+    <string name="hint_Password">Masukkan Kata Kunci Anda</string>
+    <string name="txt_CekPassword">Konfirmasi Kata Kunci (Password)</string>
+    <string name="hint_CekPassword">Masukkan Kata Kunci Anda Sekali Lagi</string>
+    <string name="btn_registrasi">Registrasi</string>
+
+    <!-- Menu Utama Masuk-->
+    <string name="title_activity_tampilan_menu_utama">TampilanMenuUtama</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="gambar_Sales">Gambar Teknisi/Sales</string>
+    <string name="gambar_formSurvei">Gambar Form Survei</string>
+    <string name="gambar_Workreport">Gambar Form Work Report</string>
+    <string name="title_activity_tampilan_pest_survey">TampilanPestSurvey</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_formSurvey">Form Survey</string>
+    <string name="title_DataSurvey">Data Hasil Survey</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Strip_Identity">Strip Identitas Pelanggan</string>
+
+    <!-- Text -->
+    <string name="text_ClientID">ID Client</string>
+    <string name="text_namaPelanggan">Nama Pelanggan/Perusahaan</string>
+    <string name="text_kategori">Kategori</string>
+    <string name="text_alamat">Alamat</string>
+    <string name="text_hp">No. HP/Telepon</string>
+    <string name="text_email">Email</string>
+    <string name="text_StatusKerjasama">Status Kerjasama</string>
+    <string name="txt_GrandTotal">Total Harga</string>
+    <string name="text_AreaInspeksi">Area/Ruang Inspeksi</string>
+    <string name="text_LuasBangunan">Luas Bangunan (m <sup><small>2</small></sup>)</string>
+    <string name="text_LuasOutdoor">Luas Outdoor (m <sup><small>2</small></sup>)</string>
+    <string name="txt_Fipronil">Fipronil 50 g/l</string>
+    <string name="txt_Imidaclporid">Imidacloprid 200 g/l</string>
+    <string name="txt_Cypermethrin">Cypermethrin 100 g/l</string>
+    <string name="txt_Dichlorphos">Dichlorphos 200 g/l</string>
+    <string name="txt_editText_ukuranLainnya">(Ukuran Lainnya)</string>
+    <string name="txt_penawaranHarga">Penawaran Harga</string>
+    <string name="text_Keterangan">Keterangan</string>
+    <string name="text_m2"> m<sup><small>2</small></sup></string>
+
+    <string name="text_TTD_Pelanggan">Tanda Tangan Pelanggan</string>
+    <string name="text_TTD_Consultant">Tanda Tangan Pest Consultant</string>
+    <string name="text_TombolTTD">Tekan untuk Tanda Tangan</string>
+    <string name="linear_text_TTD">Tanda Tangan Disini</string>
+    <string name="linear_text_Batal">Batal</string>
+    <string name="linear_text_Hapus">Hapus</string>
+    <string name="linear_text_Simpan">Simpan</string>
+    <string name="hapus_txt">Hapus</string>
+
+    <string name="radio_Treatment">Treatment</string>
+    <string name="radio_Complaint">Complaint</string>
+    <string name="radio_Supervisi">Supervisi</string>
+    <string name="radio_PestControl">Pest Control</string>
+    <string name="radio_TermiteControl">Termite Control</string>
+    <string name="radio_Fumigasi">Fumigasi</string>
+    <string name="txt_NamaClient">Nama Client</string>
+
+    <!-- Hint -->
+    <string name="Hint_NamaClient">(Masukkan Nama Client)</string>
+    <string name="Hint_ClientID">(Masukkan ID Client)</string>
+    <string name="hint_namaPelanggan">(Masukkan Nama Pelanggan/Perusahaan)</string>
+    <string name="hint_alamat">(Masukkan Alamat Pelanggan/Perusahaan)</string>
+    <string name="hint_telepon">(Masukkan No. HP/Telepon Pelanggan/Perusahaan)</string>
+    <string name="hint_email">(Masukkan Alamat Email Pelanggan/Perusahaan)</string>
+    <string name="hint_masukkanAngka">(Masukkan Angka)</string>
+    <string name="hint_QtyPenanganan">(Masukkan Jumlah Kunjungan/Orang) </string>
+    <string name="hint_masukkan_jenis_hama_lainnya">(Masukkan Jenis Hama Lainnya)</string>
+    <string name="hint_rincian_area_ruang_inspeksi">(Masukkan Rincian Area/Ruang Inspeksi)</string>
+    <string name="hint_KuantitasBuah">(Kuantitas/Buah)</string>
+    <string name="hint_QtyTitik">(Kuantitas Titik yang Diperlukan)</string>
+    <string name="hint_LuasBangunan">(Masukkan Luas Bangunan)</string>
+    <string name="hint_LuasOutdoor">(Masukkan Luas Outdoor)</string>
+    <string name="hint_DurasiKontrak">(Masukkan Durasi Kontrak)</string>
+    <string name="hint_PenawaranHarga">(Masukkan Penawaran Harga)</string>
+    <string name="hint_Keterangan">(Berikan Keterangan Tambahan Jika Ada)</string>
+    <string name="hint_MetodeLain">(Masukkan Metode Lainnya)</string>
+    <string name="hint_login_username">(Masukkan Nama Pengguna Anda)</string>
+    <string name="hint_login_password">(Masukkan Kata Kunci Anda)</string>
+    <string name="hint_txt_penawaranHarga">(Masukkan Penawaran Harga)</string>
+    <string name="hint_catatanTambahan">(Berikan Catatan Tambahan Jika Ada)</string>
+    <string name="txt_QtyBotolChemical">(Masukkan Kuantitas Botol)</string>
+    <string name="txt_QtyBotolChemical_Fipronil">(Masukkan Kuantitas Botol Fipronil)</string>
+    <string name="txt_QtyBotolChemical_Imidaclporid">(Masukkan Kuantitas Botol Imidacloprid)</string>
+    <string name="txt_QtyBotolChemical_Cypermethrin">(Masukkan Kuantitas Botol Cypermethrin)</string>
+    <string name="txt_QtyBotolChemical_Dichlorphos">(Masukkan Kuantitas Botol Dichlorphos)</string>
+    <string name="txt_QtyBotolChemical_BaitingAG">(Masukkan Kuantitas Unit Baiting AG)</string>
+    <string name="txt_QtyBotolChemical_BaitingIG">(Masukkan Kuantitas Unit Baiting IG)</string>
+    <string name="text_DurasiKontrak">Durasi Kontrak (Bulan)</string>
+
+    <!-- Spinner -->
+    <string name="kategori_prompt">Pilih Kategori</string>
+    <string-array name="kategori_pilihan">
+        <item>Kantor</item>
+        <item>Pabrik Makanan</item>
+        <item>Pabrik Non Makanan</item>
+        <item>Restoran</item>
+        <item>Rumah Tinggal</item>
+    </string-array>
+
+    <string name="jenisGasFumigasi_prompt">Pilih Gas Fumigasi</string>
+    <string-array name="jenisGasFumigasi_pilihan">
+        <item>Methyl Bromide</item>
+        <item>Sulfur Flouride</item>
+        <item>Phosphine</item>
+    </string-array>
+
+    <string name="jenisRayap_prompt">Pilih Jenis Rayap</string>
+    <string-array name="JenisRayap_pilihan">
+        <item>Cryptotermes</item>
+        <item>Glyptotermes</item>
+        <item>Coptotermes</item>
+        <item>Schedorhinotermes</item>
+        <item>Odontotermes</item>
+        <item>Macrotermes</item>
+    </string-array>
+
+    <string name="kategoriPenanganan_prompt">Pilih Kategori</string>
+    <string name="pilihanKontrak_prompt">Pilih Kontrak Kerja</string>
+
+    <string name="check_Lainnya">Lainnya</string>
+    <string-array name="kategoriPenanganan_pilihan">
+        <item>Sistem Mobile</item>
+        <item>Standby/Station</item>
+        <item> One Time Service </item>
+    </string-array>
+
+    <string name="chemical_prompt">Pilih Chemical</string>
+    <string-array name="chemical_pilihan">
+        <item><i>boric acid</i></item>
+        <item><i>cypermethrin</i></item>
+        <item><i>zeta-cypermethrin</i></item>
+        <item><i>dichlorvos</i></item>
+        <item><i>fipronil</i></item>
+        <item><i>thiamethoxam</i></item>
+    </string-array>
+
+    <string name="metodeLain_prompt">Pilih Fumigasi</string>
+    <string-array name="metodeLain_entries">
+        <item>Phosphine (PH3)</item>
+        <item>Sulfuryl Flouride (SO2F2)</item>
+    </string-array>
+
+    <string-array name="pilihanKontrak_entries">
+        <item>Non-Kontrak</item>
+        <item>Kontrak </item>
+    </string-array>
+
+    <!-- Search Pest and Termite -->
+    <string name="cariPest_prompt">Pilih Pencarian</string>
+    <string-array name="cariPest_entries">
+        <item>Seluruh Data</item>
+        <item>ID Client</item>
+        <item>Client</item>
+        <item>No HP</item>
+        <item>Status</item>
+        <item>Terbaru</item>
+        <item>Terlawas</item>
+    </string-array>
+
+    <!-- Search Work Report -->
+    <string name="cariWorkReport_prompt">Pilih Pencarian</string>
+    <string-array name="cariWorkReport_entries">
+        <item>Seluruh Data</item>
+        <item>ID Client</item>
+        <item>Client</item>
+        <item>Jenis Pengerjaan</item>
+        <item>Pekerjaan</item>
+        <item>Terbaru</item>
+        <item>Terlawas</item>
+    </string-array>
+
+    <!-- CheckBox -->
+    <string name="chk_Penyemprotan">Penyemprotan (<i>Spraying</i>)</string>
+    <string name="chk_ColdFogging">Pengembunan (<i> Cold Fogging</i>)</string>
+    <string name="chk_ThermalFogging">Pengasapan (<i>Thermal Fogging</i>)</string>
+    <string name="chk_MiniFogging">Pengasapan (<i>Mini Fogging</i>)</string>
+    <string name="chk_PerangkapTikus">Perangkap Tikus Massal (<i>Rodent Trap</i>)</string>
+    <string name="chk_LemTikus">Lem Tikus (<i>Rodent Glue Trap</i>)</string>
+    <string name="chk_UmpanTikusIndoor">Umpan Tikus (<i>Rodent Baiting Indoor</i>)</string>
+    <string name="chk_UmpanTikusOutdoor">Umpan Tikus (<i>Rodent Baiting Outdoor</i>)</string>
+    <string name="chk_GelKecoa">Umpan Gel Kecoa (<i>Roach Gelling</i>)</string>
+    <string name="chk_UmpanSemut">Umpan Semut (<i>Ant Baiting</i>)</string>
+    <string name="chk_LemKecoa">Perangkap Lem Kecoa (<i>Hoy-hoy</i>)</string>
+    <string name="chk_UmpanLalat">Umpan Lalat (<i>Fly Baiting</i>)</string>
+    <string name="chk_PohonLalat">Pohon Lalat</string>
+    <string name="chk_BlackHole">Instalasi <i>Black Hole</i></string>
+    <string name="chk_Fumigas">Fumigasi</string>
+    <string name="chk_FlyCatcher">Instalasi <i>Fly Catcher</i></string>
+    <string name="txt_check_BaitingAG">Baiting AG</string>
+    <string name="txt_Check_BaitingIG">Baiting IG</string>
+
+    <string name="txt_check_Keramik">Keramik</string>
+    <string name="txt_check_Granito">Granit Tile</string>
+    <string name="txt_check_Marmer">Marmer</string>
+    <string name="txt_check_Granit">Granit</string>
+    <string name="txt_check_Teraso">Teraso</string>
+    <string name="txt_check_SolidParquet">Solid Parquet</string>
+    <string name="txt_checkVinylParquet">Vinyl Parquet</string>
+    <string name="txt_checkLaminatedParquet">Laminated Parquet</string>
+    <string name="txt_checkLantaiBeton">Lantai Beton</string>
+    <string name="txt_check30x30">30x30</string>
+    <string name="txt_check40x40">40x40</string>
+    <string name="txt_check60x60">60x60</string>
+    <string name="txt_check_ukuranLainnya">Lainnya</string>
+    <string name="check_Kecoa">Kecoa</string>
+    <string name="check_Kutu">Kutu</string>
+    <string name="Check_Lalat">Lalat</string>
+    <string name="Check_Cicak">Cicak</string>
+    <string name="check_Semut">Semut</string>
+    <string name="check_Tikus">Tikus</string>
+    <string name="check_Tawon">Tawon</string>
+    <string name="check_Nyamuk">Nyamuk</string>
+    <string name="text_Kunjungan">x Kunjungan/Bulan</string>
+    <string name="text_Orang">Orang</string>
+    <string name="checkbox_spraying">Spraying</string>
+    <string name="checkb0x_injectDrill">Drill Inject</string>
+    <string name="checkbox_baitingIG">Termite Baiting IG</string>
+    <string name="checkbox_BaitingAG">Termite Baiting AG</string>
+    <string name="checkbox_Fumigasi">Fumigasi</string>
+    <string name="checkbox_BoricAcid">boric acid</string>
+    <string name="checkbox_Cypermethrin">cypermethrin</string>
+    <string name="checkbox_ZetaCypermethrin">zeta-cypermethrin</string>
+    <string name="checkbox_dichlorvos">dichlorvos</string>
+    <string name="checkbox_fipronil">fipronil</string>
+    <string name="checkbox_thiamethoxam">thiamethoxam</string>
+
+    <!-- RadioButton/Button -->
+    <string name="radio_Kontrak">Kontrak</string>
+    <string name="radio_NonKontrak">Non-Kontrak</string>
+    <string name="radio_Berhasil">Berhasil</string>
+    <string name="radio_Gagal">Gagal</string>
+    <string name="radio_Menunggu">Menunggu</string>
+    <string name="button_SimpanFormSurvey">Simpan Data</string>
+    <string name="RadioButton_PraKonstruksi">Anti Rayap Pra-Konstruksi GARANSI 5 TAHUN</string>
+    <string name="RadioButton_PascaKonstruksi">Anti Rayap Pasca-Konstruksi GARANSI 3 TAHUN</string>
+
+    <!-- Pernyataan -->
+    <!-- untuk Pest Control -->
+    <string name="text_pernyataanCustomer">Saya Menyadari Bahwa Survey dan Data Survey yang <b> Telah Dimasukkan oleh Pest Consultant Fumida Adalah Benar. </b></string>
+    <string name="text_pernyataanPestControl">Saya Menyadari Bahwa Survey dan Data Survey yang <b> Telah Saya Masukkan Sebagai Pest Consultant Fumida adalah Benar. </b></string>
+
+    <!-- untuk Termite Control -->
+    <string name="text_pernyataanCustomer_Termite">Saya Menyadari Bahwa Survey dan Data Survey yang <b> Telah Dimasukkan oleh Termite Consultant Fumida Adalah Benar. </b></string>
+    <string name="text_pernyataanTermiteControl">Saya Menyadari Bahwa Survey dan Data Survey yang <b> Telah Saya Masukkan Sebagai Termite Consultant Fumida adalah Benar. </b></string>
+
+    <!-- untuk Fumigasi -->
+    <string name="text_pernyataanCustomer_Fumigasi">Saya Menyadari Bahwa Survey dan Data Survey yang <b> Telah Dimasukkan oleh Fumigasi Consultant Fumida Adalah Benar. </b></string>
+    <string name="text_pernyataanFumigasi">Saya Menyadari Bahwa Survey dan Data Survey yang <b> Telah Saya Masukkan Sebagai Fumigasi Consultant Fumida adalah Benar. </b></string>
+
+    <!-- untuk Work Report -->
+    <string name="text_pernyataanCustomer_WorkReport">Saya Menyadari Bahwa Data Work Report yang <b> Telah Dimasukkan oleh Petugas Fumida Adalah Benar. </b></string>
+    <string name="text_pernyataanWorkReport">Saya Menyadari Bahwa Data Work Report yang <b> Telah Saya Masukkan Sebagai Petugas Fumida adalah Benar. </b></string>
+    <string name="title_activity_tab_survei_pest_control">Form dan Data Survey Pest Control</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_tab_survei_termite_control">Form dan Data Survey Termite Control</string>
+    <string name="title_activity_tab_work_report">Form dan Data Work Report</string>
+    <string name="title_activity_tab_fumigasi">TabFumigasi</string>
+
+</resources>
