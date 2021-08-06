@@ -146,7 +146,7 @@ public class UpdateWorkReport extends AppCompatActivity implements View.OnClickL
     private EditText edt_Pekerja;
     private EditText edt_WaktuMulai;
     //--------------- Bagian VI : Waktu Mulai ---------------
-
+    private EditText edt_pembayaran, edt_ket_pembayran, edt_kendaraan;
     //--------------- Bagian VII : Upload Foto---------------
     private Button btn_PilihFotoSatu, btn_PilihFotoDua, btn_PilihFotoTiga, btn_PilihFotoEmpat;
 
@@ -188,7 +188,7 @@ public class UpdateWorkReport extends AppCompatActivity implements View.OnClickL
             qtyLemTikus, qtyPerangkapTikus, qtyUmpanTikusOutdoor, qtyUmpanTikusIndoor, qtyPohonLalat, qtyBlackhole,
             jenisFumigasi, qtyFlycatcher, metodeLain, totalRayap, metodeKendaliRayap, chemicalTermite, qtyFipronil, qtyImidaclporid,
             qtyCypermethrin, qtyDicholorphos, qtyBaitingAG, qtyBaitingIG, gasFumigasi, waktuMulai, worker,
-            pathFotoSatu, pathFotoDua, pathFotoTiga, pathFotoEmpat, pathTTDClient, pathTTDConsultant;
+            pathFotoSatu, pathFotoDua, pathFotoTiga, pathFotoEmpat, pathTTDClient, pathTTDConsultant, nominal, ketNominal, kendaraan;
     //getData from DB ----------------------------------------------------------->
 
     //Save to DB ------------------------------------------------------------------>
@@ -372,6 +372,10 @@ public class UpdateWorkReport extends AppCompatActivity implements View.OnClickL
 
         edt_Pekerja = findViewById(R.id.editText_PersonWorker_Update);
         edt_WaktuMulai = findViewById(R.id.editText_WaktuMulai_Update);
+        edt_pembayaran = findViewById(R.id.konfirmasi_ketbayar_update);
+        edt_ket_pembayran = findViewById(R.id.penjelasan_bayar_update);
+        edt_kendaraan = findViewById(R.id.jenis_kendaraan_update);
+
         // edt_WaktuSelesai = findViewById(R.id.editText_WaktuSelesai);
 
         //Button Foto
@@ -543,6 +547,10 @@ public class UpdateWorkReport extends AppCompatActivity implements View.OnClickL
             qtyDicholorphos = c.getString(Konfigurasi.TERMITE_KEY_GET_TAG_QTY_DICHLORPHOS);
             qtyBaitingAG = c.getString(Konfigurasi.TERMITE_KEY_GET_TAG_QTY_BAITING_AG);
             qtyBaitingIG = c.getString(Konfigurasi.TERMITE_KEY_GET_TAG_QTY_BAITING_IG);
+
+            nominal = c.getString("pembayaran");
+            ketNominal = c.getString("ket_bayar");
+            kendaraan = c.getString("kendaraan");
 
             //Bagian IV : Fumigasi
             gasFumigasi = c.getString(Konfigurasi.WORKREPORT_KEY_GET_TAG_GAS_FUMIGASI);
@@ -770,6 +778,9 @@ public class UpdateWorkReport extends AppCompatActivity implements View.OnClickL
         edt_AlamatClient.setText(alamatPelanggan);
         edt_Pekerja.setText(worker);
         edt_WaktuMulai.setText(waktuMulai);
+        edt_pembayaran.setText(nominal);
+        edt_ket_pembayran.setText(ketNominal);
+        edt_kendaraan.setText(kendaraan);
 
         if (!pathFotoSatu.isEmpty()) {
             img_FotoSatu.setVisibility(View.VISIBLE);
@@ -1718,6 +1729,9 @@ public class UpdateWorkReport extends AppCompatActivity implements View.OnClickL
         clientID_WorkReport = edt_ClientID.getText().toString();
         namaClient_WorkReport = edt_Client.getText().toString();
         alamat_WorkReport = edt_AlamatClient.getText().toString();
+        nominal = edt_pembayaran.getText().toString();
+        ketNominal = edt_ket_pembayran.getText().toString();
+        kendaraan = edt_kendaraan.getText().toString();
 
         if (jenis_pengerjaan.isEmpty()) {
             rdb_Treatment.setError("Harap Memilih Jenis Pengerjaan pada Work Report");
@@ -2295,6 +2309,10 @@ public class UpdateWorkReport extends AppCompatActivity implements View.OnClickL
 
                 params.put(Konfigurasi.KEY_TAG_ID, TampilanMenuUtama.id_pegawai);
                 params.put(Konfigurasi.WORKREPORT_KEY_GET_LIST_SURVEI_ID, id_survei);
+
+                params.put(Konfigurasi.KEY_PEMBAYARAN, nominal);
+                params.put(Konfigurasi.KEY_PEMBAYARAN_KET, ketNominal);
+                params.put(Konfigurasi.KEY_KENDARAAN, kendaraan);
 
                 RequestHandler rh = new RequestHandler();
                 return rh.sendPostRequest(Konfigurasi.URL_UPDATE_WORK_REPORT, params);

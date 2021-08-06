@@ -33,6 +33,8 @@ public class RequestHandler {
 
         //Objek StringBuilder untuk menyimpan pesan diambil dari server
         StringBuilder sb = new StringBuilder();
+        Log.e("INI CUKKKK PARAM", String.valueOf(postDataParams));
+
         try {
             //Inisialisasi URL
             url = new URL(requestURL);
