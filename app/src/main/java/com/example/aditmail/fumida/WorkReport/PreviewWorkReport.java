@@ -98,10 +98,11 @@ public class PreviewWorkReport extends AppCompatActivity {
     private TextView txt_Rev_WaktuMulai_WorkReport, txt_Rev_WaktuSelesai_WorkReport;
 
     private String dateNow;
+    private String nominalValue, ketNominalValue, kendaraanValue;
     //-------------- Bagian V : Waktu Mulai --------------
 
     //-------------- Bagian VI : TTD --------------
-    private TextView txt_Rev_NamaConsultant_WorkReport, txt_Rev_NamaPelanggan_WorkReport, txt_Rev_Keterangan_WorkReport;
+    private TextView txt_Rev_NamaConsultant_WorkReport, txt_Rev_NamaPelanggan_WorkReport, txt_Rev_Keterangan_WorkReport, txt_nominal, txt_ket_nominal, txt_kendaraan;
     private ImageView ttd_Rev_Pelanggan_WorkReport, ttd_Rev_Consultant_WorkReport;
     //-------------- Bagian VI : TTD --------------
 
@@ -216,6 +217,9 @@ public class PreviewWorkReport extends AppCompatActivity {
         //Bagian IV
         tbr_Fumigasi = findViewById(R.id.TableRow_GasFumigasi);
         txt_Rev_GasFumigasi_WorkReport = findViewById(R.id.textView_GasFumigasi_WorkReport);
+        txt_nominal = findViewById(R.id.txtview_pembayaran_value);
+        txt_ket_nominal = findViewById(R.id.txtView_ket_bayar_value);
+        txt_kendaraan = findViewById(R.id.txtview_kendaraan_value);
 
         //Bagian V
         txt_Rev_Worker_WorkReport = findViewById(R.id.textView_Nama_Worker_WorkReport);
@@ -324,6 +328,10 @@ public class PreviewWorkReport extends AppCompatActivity {
             pathFotoTiga = c.getString(Konfigurasi.WORKREPORT_KEY_GET_TAG_FOTO_TIGA);
             pathFotoEmpat = c.getString(Konfigurasi.WORKREPORT_KEY_GET_TAG_FOTO_EMPAT);
 
+            nominalValue = c.getString("pembayaran");
+            ketNominalValue = c.getString("ket_bayar");
+            kendaraanValue = c.getString("kendaraan");
+
             //Bagian VI : TTD
             pathTTDClient = c.getString(Konfigurasi.WORKREPORT_KEY_GET_TAG_TTD_PELANGGAN);
             pathTTDConsultant = c.getString(Konfigurasi.WORKREPORT_KEY_GET_TAG_TTD_CONSULTANT);
@@ -340,7 +348,9 @@ public class PreviewWorkReport extends AppCompatActivity {
         txt_Rev_IDClient_WorkReport.setText(idClient);
         txt_Rev_NamaClient_WorkReport.setText(NamaPelanggan);
         txt_Rev_Alamat_WorkReport.setText(alamatPelanggan);
-
+        txt_nominal.setText(nominalValue);
+        txt_ket_nominal.setText(ketNominalValue);
+        txt_kendaraan.setText(kendaraanValue);
         //Jenis Pekerjaan
         txt_Rev_Pekerjaan_WorkReport.setText(pekerjaan);
 
@@ -468,6 +478,7 @@ public class PreviewWorkReport extends AppCompatActivity {
         txt_Rev_WaktuSelesai_WorkReport.setText(waktuSelesai + " WIB");
         txt_Rev_NamaConsultant_WorkReport.setText(TampilanMenuUtama.namaLengkap);
         txt_Rev_NamaPelanggan_WorkReport.setText(NamaPelanggan);
+
 
         try {
             Glide.with(getApplicationContext())
