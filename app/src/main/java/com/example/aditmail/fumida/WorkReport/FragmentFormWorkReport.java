@@ -100,6 +100,11 @@ public class FragmentFormWorkReport extends Fragment implements View.OnClickList
     public final static String WorkReport_Rev_LatLong_Consultant = path_fumida + ".LatLong_Consultant";
     public final static String WorkReport_Rev_LatLong_Alamat_Pelanggan = path_fumida + ".LatLong_AlamatPelanggan";
 
+    public final static String WorkReport_Nominal = path_fumida + ".nominalReport";
+    public final static String WorkReport_Keterangan_Nominal = path_fumida + ".ketNominalReport";
+    public final static String WorkReport_Kendaraan = path_fumida + ".kendaraanReport";
+
+
     protected TimePickerDialog timePickerDialog;
 
     //-------------- Bagian I : Jenis Pekerjaan --------------
@@ -186,6 +191,12 @@ public class FragmentFormWorkReport extends Fragment implements View.OnClickList
 
     //Untuk Create View Fragment
     private View view;
+
+//    Untuk Pembayaran
+    private EditText edtNominal, edtKetNominal;
+
+//    Untuk Jenis Kendaraan
+    private EditText edtJenisKendaraan;
 
     LocationManager locationManager;
 
@@ -357,6 +368,13 @@ public class FragmentFormWorkReport extends Fragment implements View.OnClickList
         img_ttdConsultant = view.findViewById(R.id.imageView_TTD_Consultant);
         chk_PernyataanPelanggan = view.findViewById(R.id.checkBox_PernyataanCustomer_WorkReport);
         chk_PernyataanConsultant = view.findViewById(R.id.checkBox_PernyataanPestConsultant_WorkReport);
+
+//        untuk ket pembayaran
+        edtNominal = view.findViewById(R.id.konfirmasi_ketbayar);
+        edtKetNominal = view.findViewById(R.id.penjelasan_bayar);
+
+//        untuk jenis kendaraan
+        edtJenisKendaraan = view.findViewById(R.id.jenis_kendaraan);
 
         //Button Simpan
         btn_SimpanWorkReport = view.findViewById(R.id.button_SimpanWorkReport);
@@ -1233,6 +1251,9 @@ public class FragmentFormWorkReport extends Fragment implements View.OnClickList
         final String clientID_WorkReport = edt_ClientID.getText().toString().toUpperCase();
         final String namaClient_WorkReport = edt_Client.getText().toString();
         final String alamat_WorkReport = edt_AlamatClient.getText().toString();
+        final String nominal = edtNominal.getText().toString();
+        final String ketNominal = edtKetNominal.getText().toString();
+        final String kendaraan = edtJenisKendaraan.getText().toString();
 
         if (jenis_pengerjaan.isEmpty()) {
             rdb_JenisKerja.setError("Harap Memilih Jenis Pengerjaan pada Work Report");
@@ -1255,6 +1276,24 @@ public class FragmentFormWorkReport extends Fragment implements View.OnClickList
         if (alamat_WorkReport.isEmpty()) {
             edt_AlamatClient.setError("Harap Memasukkan Alamat");
             edt_AlamatClient.requestFocus();
+            return;
+        }
+
+        if (nominal.isEmpty()){
+            edtNominal.setError("Harap Masukkan Nominal");
+            edtNominal.requestFocus();
+            return;
+        }
+
+        if (ketNominal.isEmpty()){
+            edtKetNominal.setError("Harap Masukkan Keterangan Nominal");
+            edtKetNominal.requestFocus();
+            return;
+        }
+
+        if (kendaraan.isEmpty()){
+            edtJenisKendaraan.setError("Harap Masukkan Jenis Kendaraan");
+            edtJenisKendaraan.requestFocus();
             return;
         }
 
@@ -1772,6 +1811,13 @@ public class FragmentFormWorkReport extends Fragment implements View.OnClickList
                 //Bagian IX: Latlong...
                 Extra_Rev_WorkReport.putString(WorkReport_Rev_LatLong_Alamat_Pelanggan, latlong_AlamatPelanggan);
                 Extra_Rev_WorkReport.putString(WorkReport_Rev_LatLong_Consultant, latlong_Consultant);
+
+                //Jenis Pembayaran
+                Extra_Rev_WorkReport.putString(WorkReport_Nominal, nominal);
+                Extra_Rev_WorkReport.putString(WorkReport_Keterangan_Nominal, ketNominal);
+
+                //Jenis Kendaraan
+                Extra_Rev_WorkReport.putString(WorkReport_Kendaraan, kendaraan);
 
                 Review_WorkReport_Intent.putExtras(Extra_Rev_WorkReport);
                 startActivity(Review_WorkReport_Intent);

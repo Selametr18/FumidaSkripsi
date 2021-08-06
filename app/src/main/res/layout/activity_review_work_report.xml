@@ -707,6 +707,144 @@
                     </TableRow>
 
                 </TableLayout>
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="20dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="3dp">
+
+                        <TextView
+                            android:id="@+id/textview_pembayaran"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.8"
+                            android:gravity="center|start"
+                            android:text="Pembayaran"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal|bold" />
+
+                        <TextView
+                            android:id="@+id/titik11"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1"
+                            android:gravity="center|start"
+                            android:text=":"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/txtview_pembayaran_value"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center|start"
+                            android:text="(Pembayaran)"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txtview_ket_pembayaran"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.8"
+                            android:gravity="center|start"
+                            android:text="Keterangan Pembayaran"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal|bold" />
+
+                        <TextView
+                            android:id="@+id/titik12"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1"
+                            android:gravity="center|start"
+                            android:text=":"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/txtView_ket_bayar_value"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center|start"
+                            android:text="(Keterangan Bayar)"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+                    </TableRow>
+                </TableLayout>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="20dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="3dp">
+
+                    <TextView
+                        android:id="@+id/textview_kendaraan"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:gravity="center|start"
+                        android:text="Kendaraan"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="10sp"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:id="@+id/titik13"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        android:gravity="center|start"
+                        android:text=":"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="10sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/txtview_kendaraan_value"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center|start"
+                        android:text="(Kendaraan)"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="10sp"
+                        android:textStyle="normal" />
+                </TableRow>
+                </TableLayout>
 
                 <TableLayout
                     android:layout_width="match_parent"

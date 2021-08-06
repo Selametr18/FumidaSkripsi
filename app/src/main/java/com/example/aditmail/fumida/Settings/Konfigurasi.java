@@ -6,7 +6,7 @@ public class Konfigurasi {
 
     //public static final String url_test = "http://10.0.2.2/fumida/";
 
-    public static final String url_image = "https://antirayap.co.id/apps.mobile.fumida/";
+    public static final String url_image = "https://antirayap.co.id/fumidaskripsi.selamet/";
     //public static final String url_access = "http://192.168.100.78/fumida/api.user/";
 
     public static final String url_access = "https://antirayap.co.id/fumidaskripsi.selamet/api.user/";
@@ -106,6 +106,11 @@ public class Konfigurasi {
     //Untuk Login
     public static final String KEY_LOGIN_USERNAME = "username";
     public static final String KEY_LOGIN_PASSWORD = "password";
+
+    //Pemabayaran dan kendaraan
+    public static final String KEY_KENDARAAN = "kendaraan";
+    public static final String KEY_PEMBAYARAN = "nominal_pembayaran";
+    public static final String KEY_PEMBAYARAN_KET = "ket_bayar";
 
     //Untuk Ambil nilai dari DB saat Login
     public static final String KEY_GET_ID = "id";

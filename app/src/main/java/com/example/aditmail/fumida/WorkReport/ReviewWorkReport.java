@@ -135,6 +135,15 @@ public class ReviewWorkReport extends AppCompatActivity {
             GetImageNameFromEditText_FotoEmpat;
     //-------------- Bagian VII : Upload Foto --------------
 
+    //Pembayaran
+    private TextView valueTxtNominal, valueTxtKetNominal, valueKendaraan;
+
+    //Kendaraan
+    private String txtNominalPembayaran, txtKetBayaran;
+
+    //kendaraan
+    private String txtKendaraan;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -275,6 +284,10 @@ public class ReviewWorkReport extends AppCompatActivity {
         img_FotoTiga = findViewById(R.id.imageView_FotoTiga_Lamp);
         img_FotoEmpat = findViewById(R.id.imageView_FotoEmpat_Lamp);
 
+        valueTxtNominal = findViewById(R.id.txtview_pembayaran_value);
+        valueTxtKetNominal = findViewById(R.id.txtView_ket_bayar_value);
+        valueKendaraan = findViewById(R.id.txtview_kendaraan_value);
+
         getFotoSatu = ((BitmapDrawable) FragmentFormWorkReport.img_FotoSatu.getDrawable()).getBitmap();
         getFotoDua = ((BitmapDrawable)FragmentFormWorkReport.img_FotoDua.getDrawable()).getBitmap();
         getFotoTiga = ((BitmapDrawable)FragmentFormWorkReport.img_FotoTiga.getDrawable()).getBitmap();
@@ -328,6 +341,13 @@ public class ReviewWorkReport extends AppCompatActivity {
         waktu_mulai = Extra_Rev_WorkReport.getString(FragmentFormWorkReport.WorkReport_Rev_WaktuMulai);
         waktu_selesai = Extra_Rev_WorkReport.getString(FragmentFormWorkReport.WorkReport_Rev_WaktuSelesai);
         keterangan= Extra_Rev_WorkReport.getString(FragmentFormWorkReport.WorkReport_Rev_Keterangan);
+
+        //pembayaran
+        txtNominalPembayaran = Extra_Rev_WorkReport.getString(FragmentFormWorkReport.WorkReport_Nominal);
+        txtKetBayaran = Extra_Rev_WorkReport.getString(FragmentFormWorkReport.WorkReport_Keterangan_Nominal);
+
+        //kendaraan
+        txtKendaraan = Extra_Rev_WorkReport.getString(FragmentFormWorkReport.WorkReport_Kendaraan);
 
         switch (pekerjaan_WorkReport){
             case "Pest Control":
@@ -474,6 +494,12 @@ public class ReviewWorkReport extends AppCompatActivity {
 
         ttd_Rev_Consultant_WorkReport.setImageBitmap(getTTD_Consultant);
         ttd_Rev_Pelanggan_WorkReport.setImageBitmap(getTTD_Pelanggan);
+
+        //set Pembayaran
+        valueTxtNominal.setText(txtNominalPembayaran);
+        valueTxtKetNominal.setText(txtKetBayaran);
+
+        valueKendaraan.setText(txtKendaraan);
 
         img_FotoSatu.setImageBitmap(getFotoSatu);
         img_FotoDua.setImageBitmap(getFotoDua);
@@ -745,6 +771,10 @@ public class ReviewWorkReport extends AppCompatActivity {
 
                 params.put(Konfigurasi.KEY_TAG_ID, TampilanMenuUtama.id_pegawai);
                 params.put(Konfigurasi.KEY_GET_NAMA, TampilanMenuUtama.namaLengkap);
+
+                params.put(Konfigurasi.KEY_PEMBAYARAN, txtNominalPembayaran);
+                params.put(Konfigurasi.KEY_PEMBAYARAN_KET, txtKetBayaran);
+                params.put(Konfigurasi.KEY_KENDARAAN, txtKendaraan);
 
                 RequestHandler rh = new RequestHandler();
                 return rh.sendPostRequest(Konfigurasi.URL_SIMPAN_WORK_REPORTS, params);
