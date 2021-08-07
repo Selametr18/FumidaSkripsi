@@ -71,6 +71,37 @@
                 />
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textView6"
+            android:layout_below="@+id/linear_Foto"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/pembayaran_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pembayaran"/>
+
+            <Button
+                android:id="@+id/kendaraan_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kendaraan"/>
+            <Button
+                android:id="@+id/pelanggan_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pelanggan"/>
+            <Button
+                android:id="@+id/pengerjaan_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pengerjaan"/>v
+
+        </LinearLayout>
         <TextView
             android:id="@+id/textView6"
             android:layout_width="match_parent"

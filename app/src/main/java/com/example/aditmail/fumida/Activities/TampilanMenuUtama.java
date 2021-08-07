@@ -29,6 +29,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -46,6 +47,10 @@ import com.example.aditmail.fumida.Settings.RequestHandler;
 import com.example.aditmail.fumida.Settings.TrackGPS;
 import com.example.aditmail.fumida.TermiteControl.TabSurveiTermiteControl;
 import com.example.aditmail.fumida.WorkReport.TabWorkReport;
+import com.example.aditmail.fumida.report.ReportKendaraan;
+import com.example.aditmail.fumida.report.ReportPelangganActivity;
+import com.example.aditmail.fumida.report.ReportPembayaran;
+import com.example.aditmail.fumida.report.ReportPengerjaan;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationListener;
@@ -75,6 +80,8 @@ public class TampilanMenuUtama extends AppCompatActivity
     public static String namaLengkap;
     public static String nik;
     public static String imgPath;
+
+    private Button btnbayar, btnkendaraan, btnpelanggan, btnpengerjaan;
 
     private Context mContext;
     Dialog myDialog;
@@ -141,6 +148,43 @@ public class TampilanMenuUtama extends AppCompatActivity
 
         txt_NamaLengkap = findViewById(R.id.textView_NamaPegawai);
         txt_id = findViewById(R.id.textView_IdPegawai);
+
+        btnbayar  = findViewById(R.id.pembayaran_btn);
+        btnkendaraan = findViewById(R.id.kendaraan_btn);
+        btnpelanggan = findViewById(R.id.pelanggan_btn);
+        btnpengerjaan = findViewById(R.id.pengerjaan_btn);
+
+        btnbayar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TampilanMenuUtama.this, ReportPembayaran.class);
+                startActivity(intent);
+            }
+        });
+
+        btnkendaraan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TampilanMenuUtama.this, ReportKendaraan.class);
+                startActivity(intent);
+            }
+        });
+
+        btnpelanggan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TampilanMenuUtama.this, ReportPelangganActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnpengerjaan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TampilanMenuUtama.this, ReportPengerjaan.class);
+                startActivity(intent);
+            }
+        });
 
 //        Image_FormSurvey = findViewById(R.id.imageView_FormSurvei);
         Image_WorkReport = findViewById(R.id.imageView_WorkReport);

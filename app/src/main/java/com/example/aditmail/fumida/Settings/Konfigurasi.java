@@ -67,6 +67,12 @@ public class Konfigurasi {
     public static final String URL_CHECK_ID_PELANGGAN_WORK_REPORT = url_access + "checkIDPelanggan_WorkReport.php";
     public static final String URL_DELETE_SURVEI_WORK_REPORT = url_access + "deleteSelectedWorkReport.php";
 
+    public static final String URL_VIEW_PEMBAYARAN = url_access + "viewPembayaran.php?id_pegawai=";
+    public static final String URL_VIEW_KENDARAAN = url_access + "viewKendaraan.php?id_pegawai=";
+    public static final String URL_VIEW_Pelanggan = url_access + "viewPelanggan.php?id_pegawai=";
+    public static final String URL_VIEW_Pengerjaan = url_access + "viewPengerjaan.php?id_pegawai=";
+
+
     /*
     static final String URL_REGISTRASI = url + "registrasi.php";
     static final String URL_LOGIN = url + "login.php";
