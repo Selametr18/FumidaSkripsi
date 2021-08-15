@@ -3,6 +3,8 @@ package com.example.aditmail.fumida.Activities;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.aditmail.fumida.R;
+
 public class CetakPelangganActivity extends AppCompatActivity {
 
     @Override

@@ -33,6 +33,8 @@
         <activity android:name=".Activities.CetakPelangganActivity"></activity>
         <activity android:name=".Activities.CetakKendaraanActivity" />
         <activity android:name=".report.ReportPengerjaan" />
+        <activity android:name=".Activities.CetakPembayranActivity"></activity>
+        <activity android:name=".report.ReportPengerjaan" />
         <activity android:name=".report.ReportPelangganActivity" />
         <activity android:name=".report.ReportKendaraan" />
         <activity android:name=".report.ReportPembayaran" />

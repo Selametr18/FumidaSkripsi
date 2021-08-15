@@ -1,13 +1,17 @@
 package com.example.aditmail.fumida.report;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
+import com.example.aditmail.fumida.Activities.CetakPembayranActivity;
 import com.example.aditmail.fumida.Activities.TampilanMenuUtama;
 import com.example.aditmail.fumida.R;
 import com.example.aditmail.fumida.Settings.Konfigurasi;
@@ -25,6 +29,7 @@ public class ReportPembayaran extends AppCompatActivity {
     private ListView listView;
     private String JSON_STRING;
     ListAdapter adapter;
+    private Button btnCetak;
 
 
     @Override
@@ -32,6 +37,13 @@ public class ReportPembayaran extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_report_pembayaran);
         listView = findViewById(R.id.listView_data_pembayaran);
+        btnCetak = findViewById(R.id.btn_cetak_report);
+        btnCetak.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoCetak();
+            }
+        });
         getJSON();
     }
 
@@ -107,4 +119,8 @@ public class ReportPembayaran extends AppCompatActivity {
         }
     }
 
+    private void gotoCetak(){
+        Intent intent = new Intent(this, CetakPembayranActivity.class);
+        startActivity(intent);
+    }
 }
