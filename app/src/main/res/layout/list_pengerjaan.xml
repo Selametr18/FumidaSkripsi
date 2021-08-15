@@ -78,7 +78,7 @@
                 android:textSize="13sp" />
 
             <TextView
-                android:id="@+id/textView_IDsurvei_Data"
+                android:id="@+id/nama_pelanggan_value"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"

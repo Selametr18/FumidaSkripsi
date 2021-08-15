@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -65,6 +66,7 @@ public class ReportPengerjaan extends AppCompatActivity {
         try {
             jsonObject = new JSONObject(JSON_STRING);
             JSONArray result = jsonObject.getJSONArray(Konfigurasi.TAG_JSON_ARRAY);
+            Log.e("RESULT NYA", result.toString());
 
             //untuk melakukan looping
             //untuk mengetahui apabila seluruh transaksi telah dimasukkan
@@ -83,7 +85,7 @@ public class ReportPengerjaan extends AppCompatActivity {
                 HashMap<String, String> dataListWorkReport = new HashMap<>();
                 //menyimpan data dari database
                 dataListWorkReport.put("id_bayar", idClient);
-                dataListWorkReport.put("nama", namaPelanggan);
+                dataListWorkReport.put("nama_pelanggannya", namaPelanggan);
                 dataListWorkReport.put("nominal", nominalBayar);
                 dataListWorkReport.put("ketbayar", ketBayar);
                 dataListWorkReport.put("kerja", pekerjaan);
@@ -102,8 +104,8 @@ public class ReportPengerjaan extends AppCompatActivity {
         if (this != null) {
             adapter = new SimpleAdapter(
                     this, list, R.layout.list_pengerjaan,
-                    new String[]{"id_bayar", "nama", "nominal","ketbayar", "kerja","hama","teknik", Konfigurasi.WORKREPORT_KEY_GET_LIST_TANGGAL},
-                    new int[]{R.id.textView_IDClient_Data, R.id.textView_IDSurvei_Data,
+                    new String[]{"id_bayar", "nama_pelanggannya", "nominal","ketbayar", "kerja","hama","teknik", Konfigurasi.WORKREPORT_KEY_GET_LIST_TANGGAL},
+                    new int[]{R.id.textView_IDClient_Data, R.id.nama_pelanggan_value,
                             R.id.textView_alamat_Data, R.id.textView_JenisPengerjaan_Data,
                             R.id.textView_pekerja_data, R.id.textView_kendaraan_Data,
                             R.id.textView_teknisi_Data, R.id.textView_Tanggal_Data}) {
