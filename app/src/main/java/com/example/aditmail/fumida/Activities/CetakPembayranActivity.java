@@ -166,11 +166,11 @@ public class CetakPembayranActivity extends AppCompatActivity {
                 keteranganBayar.setTextSize(TypedValue.COMPLEX_UNIT_SP, 9);
                 tgl.setTextSize(TypedValue.COMPLEX_UNIT_SP, 9);
 
-                tableRow.addView(Client, (new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,0.5f)));
-                tableRow.addView(name, (new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,0.7f)));
-                tableRow.addView(nominal, (new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,0.5f)));
+                tableRow.addView(Client, (new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,1.0f)));
+                tableRow.addView(name, (new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,1.0f)));
+                tableRow.addView(nominal, (new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,1.0f)));
                 tableRow.addView(keteranganBayar, (new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,1.0f)));
-                tableRow.addView(tgl,(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,0.5f)));
+                tableRow.addView(tgl,(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,1.0f)));
                 tableLayout.addView(tableRow);
             }
 
