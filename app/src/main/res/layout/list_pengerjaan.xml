@@ -87,38 +87,6 @@
                 android:textSize="13sp"
                 android:textStyle="bold" />
         </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/textView_alamat"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Alamat "
-                android:textColor="@color/Fumida_ColorAtas"
-                android:textSize="13sp" />
-
-            <TextView
-                android:id="@+id/textView00"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.2"
-                android:text=":"
-                android:textColor="@color/Fumida_ColorAtas"
-                android:textSize="13sp" />
-
-            <TextView
-                android:id="@+id/textView_alamat_Data"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:text="TextView"
-                android:textColor="@color/Fumida_ColorAtas"
-                android:textSize="13sp"
-                android:textStyle="bold" />
-        </TableRow>
 
         <TableRow
             android:layout_width="match_parent"

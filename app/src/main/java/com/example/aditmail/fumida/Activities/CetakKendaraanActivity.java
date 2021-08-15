@@ -236,7 +236,7 @@ private String JSON_STRING;
 
         // close the document
         document.close();
-        Toast.makeText(this, "PDF Form Survei Pest Control Berhasil Dibuat", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "PDF Form Work Report Berhasil Dibuat", Toast.LENGTH_SHORT).show();
 
         //Tampilin Alert Dialog
         AlertDialog.Builder builder = new AlertDialog.Builder(CetakKendaraanActivity.this);

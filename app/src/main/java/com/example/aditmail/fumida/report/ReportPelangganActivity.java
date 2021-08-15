@@ -1,13 +1,18 @@
 package com.example.aditmail.fumida.report;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
+import com.example.aditmail.fumida.Activities.CetakKendaraanActivity;
+import com.example.aditmail.fumida.Activities.CetakPelangganActivity;
 import com.example.aditmail.fumida.Activities.TampilanMenuUtama;
 import com.example.aditmail.fumida.R;
 import com.example.aditmail.fumida.Settings.Konfigurasi;
@@ -25,11 +30,20 @@ public class ReportPelangganActivity extends AppCompatActivity {
     private ListView listView;
     private String JSON_STRING;
     ListAdapter adapter;
+    private Button btnCetak;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_report_pelanggan);
         listView = findViewById(R.id.listView_data_pelanggan);
+        btnCetak = findViewById(R.id.btn_cetak_report);
+        btnCetak.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoCetak();
+            }
+        });
         getJSON();
     }
 
@@ -95,13 +109,16 @@ public class ReportPelangganActivity extends AppCompatActivity {
         if (this != null) {
             adapter = new SimpleAdapter(
                     this, list, R.layout.list_pelanggan,
-                    new String[]{"id_pelanggan", "nama", "alamat","pengerjaan", Konfigurasi.WORKREPORT_KEY_GET_LIST_TANGGAL},
-                    new int[]{R.id.textView_IDClient_Data, R.id.textView_NamaPelanggan_Data,
-                            R.id.textView_nominal_Data, R.id.textView_ketBayar_Data, R.id.textView_Tanggal_Data}) {
+                    new String[]{"id_pelanggan", "nama", "pengerjaan", Konfigurasi.WORKREPORT_KEY_GET_LIST_TANGGAL},
+                    new int[]{R.id.textView_IDClient_Data, R.id.textView_NamaPelanggan_Data, R.id.textView_ketBayar_Data, R.id.textView_Tanggal_Data}) {
 
             };
 
             listView.setAdapter(adapter);
         }
+    }
+    private void gotoCetak(){
+        Intent intent = new Intent(this, CetakPelangganActivity.class);
+        startActivity(intent);
     }
 }
