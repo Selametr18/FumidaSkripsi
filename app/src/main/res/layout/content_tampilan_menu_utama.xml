@@ -40,12 +40,11 @@
 
         <LinearLayout
             android:id="@+id/linear_Foto"
-            android:layout_centerInParent="true"
-            android:layout_centerVertical="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:weightSum="2"
+            android:layout_marginTop="100dp"
             android:orientation="horizontal">
 
 <!--            <ImageView-->
