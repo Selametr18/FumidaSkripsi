@@ -11,6 +11,7 @@
     <string name="User_Icon">Gambar User</string>
     <string name="Button_Regis">Registrasi Akun Baru</string>
     <string name="image_regist">Registrasi Data Diri</string>
+    <string name="tgl_laporan">Jakarta, %1s</string>
 
     <!-- Menu Registrasi-->
     <string name="regis_NamaLengkap">Nama Lengkap</string>
