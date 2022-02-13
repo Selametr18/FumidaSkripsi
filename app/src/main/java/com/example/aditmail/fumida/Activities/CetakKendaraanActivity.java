@@ -70,7 +70,7 @@ private String JSON_STRING;
         tglLaporan = findViewById(R.id.txt_tanggal);
         ttdName = findViewById(R.id.ttd_name);
         dateNow = new SimpleDateFormat("dd-MM-yy_hh.mm.ss", Locale.getDefault()).format(new Date());
-        dateLaporan = new SimpleDateFormat("dd MMMM yyyy", Locale.getDefault()).format(new Date());
+        dateLaporan = new SimpleDateFormat("EEEE dd MMMM yyyy", Locale.getDefault()).format(new Date());
         tglLaporan.setText(String.format(getResources().getString(R.string.tgl_laporan), dateLaporan));
         ttdName.setText(TampilanMenuUtama.namaLengkap);
         file_pest = new File(DIR_PEST);
