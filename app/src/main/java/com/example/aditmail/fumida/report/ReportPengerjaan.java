@@ -13,6 +13,8 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
 import com.example.aditmail.fumida.Activities.CetakKendaraanActivity;
+import com.example.aditmail.fumida.Activities.CetakPelangganActivity;
+import com.example.aditmail.fumida.Activities.CetakPengerjaanActivity;
 import com.example.aditmail.fumida.Activities.TampilanMenuUtama;
 import com.example.aditmail.fumida.R;
 import com.example.aditmail.fumida.Settings.Konfigurasi;
@@ -126,7 +128,7 @@ public class ReportPengerjaan extends AppCompatActivity {
     }
 
     private void gotoCetak() {
-        Intent intent = new Intent(this, CetakKendaraanActivity.class);
+        Intent intent = new Intent(this, CetakPengerjaanActivity.class);
         startActivity(intent);
     }
 }

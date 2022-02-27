@@ -30,7 +30,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activities.CetakPengerjaanActivity"></activity>
+        <activity
+            android:name=".Activities.CetakPengerjaanActivity"
+            android:exported="false" />
         <activity android:name=".Activities.CetakPelangganActivity" />
         <activity android:name=".Activities.CetakKendaraanActivity" />
         <activity android:name=".report.ReportPengerjaan" />
