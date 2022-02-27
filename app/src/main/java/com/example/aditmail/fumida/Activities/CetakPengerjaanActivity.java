@@ -130,33 +130,51 @@ public class CetakPengerjaanActivity extends AppCompatActivity {
                 TextView NamaPelanggan = new TextView(this);
                 TextView JenisPengerjaan = new TextView(this);
                 TextView Tanggal = new TextView(this);
+                TextView pekerjaan = new TextView(this);
+                TextView hama = new TextView(this);
+                TextView petugas = new TextView(this);
 
                 JSONObject jo = result.getJSONObject(i);
 
                 String idClient = jo.getString("id_pelanggan");
                 String namaPelanggan = jo.getString("nama_pelanggan");
                 String jenisPengerjaan = jo.getString("jenis_pengerjaan");
+                String pekerjaan1 = jo.getString("pekerjaan");
+                String jenishama = jo.getString("jenis_hama");
+                String teknsi = jo.getString("nama_teknisi");
                 String tanggal = jo.getString(Konfigurasi.WORKREPORT_KEY_GET_LIST_TANGGAL);
 
                 IdClient.setText(idClient);
                 NamaPelanggan.setText(namaPelanggan);
                 JenisPengerjaan.setText(jenisPengerjaan);
                 Tanggal.setText(tanggal);
+                pekerjaan.setText(pekerjaan1);
+                hama.setText(jenishama);
+                petugas.setText(teknsi);
 
                 IdClient.setBackground(bgCell);
                 NamaPelanggan.setBackground(bgCell);
                 JenisPengerjaan.setBackground(bgCell);
                 Tanggal.setBackground(bgCell);
+                pekerjaan.setBackground(bgCell);
+                hama.setBackground(bgCell);
+                petugas.setBackground(bgCell);
 
                 IdClient.setTextSize(TypedValue.COMPLEX_UNIT_SP, 9);
                 NamaPelanggan.setTextSize(TypedValue.COMPLEX_UNIT_SP, 9);
                 JenisPengerjaan.setTextSize(TypedValue.COMPLEX_UNIT_SP, 9);
                 Tanggal.setTextSize(TypedValue.COMPLEX_UNIT_SP, 9);
+                pekerjaan.setTextSize(TypedValue.COMPLEX_UNIT_SP,9);
+                hama.setTextSize(TypedValue.COMPLEX_UNIT_SP,9);
+                petugas.setTextSize(TypedValue.COMPLEX_UNIT_SP,9);
 
                 tableRow.addView(IdClient, (new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,0.5f)));
                 tableRow.addView(NamaPelanggan, (new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,0.7f)));
                 tableRow.addView(JenisPengerjaan, (new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,0.5f)));
-                tableRow.addView(Tanggal,(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,1.0f)));
+                tableRow.addView(Tanggal,(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,0.5f)));
+                tableRow.addView(pekerjaan, (new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,0.5f)));
+                tableRow.addView(hama,(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,0.5f)));
+                tableRow.addView(petugas, (new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,0.5f)));
                 tableLayout.addView(tableRow);
             }
 
@@ -208,7 +226,7 @@ public class CetakPengerjaanActivity extends AppCompatActivity {
         canvas.drawBitmap(bitmap, 0, 0, null);
         document.finishPage(page);
 
-        simpan_pest = DIR_PEST + "Cetak_"+ "Pelanggan_" + dateNow + ".pdf";
+        simpan_pest = DIR_PEST + "Cetak_"+ "Pengerjaan_" + dateNow + ".pdf";
 
         File filePath;
         filePath = new File(simpan_pest);
